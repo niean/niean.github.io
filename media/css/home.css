@@ -78,7 +78,7 @@ border-bottom:1px dashed #bbb;
 margin-left:auto;
 margin-right:auto;
 zoom:1px;
-width:700px;
+width:750px;
 }
 
 p {
@@ -115,16 +115,19 @@ color:#999;
 h1 {
 font-size:30px;
 line-height:60px;
+margin:30 0 15px;
 }
 
 h2 {
 font-size:24px;
 line-height:60px;
+margin:24 0 12px;
 }
 
 h3 {
-line-height:45px;
 font-size:18px;
+line-height:45px;
+margin:18 0 9px;
 }
 
 h6 {
