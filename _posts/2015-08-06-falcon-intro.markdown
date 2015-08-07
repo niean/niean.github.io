@@ -12,7 +12,7 @@ Falcon是一个企业级的监控解决方案，偏向于平台化，主要提�
 
 ## 系统架构
 **服务模块**
-![archi](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20150806/arch.png)
+![archi](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20150806/archi.1.png)
 
 转发服务Transfer，负责收集监控数据，并将收集到的监控数据分片、发送给Judge&Graph（以及正在测试中的 持久化存储rrd.hbase）。
 
