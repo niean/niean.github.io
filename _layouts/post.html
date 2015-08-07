@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="post">
+  {{ content }}
+</section>
+
+<section class="meta">
+
+<br/>
+<br/>
+<span>
+	<a {% if page.previous %} href="{{ site.url }}{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >Prev</a>
+	&nbsp;&nbsp;&nbsp;
+	<a {% if page.next %} href="{{ site.url }}{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >Next</a>
+</span>
+<hr>
+<br />
+
+</section>
+{% include comments.md %}
+
