@@ -4,6 +4,7 @@ title: 小米监控系统Falcon简析
 date: 2015-08-06 20:00
 tags:
   - monitor
+  - falcon
 ---
 
 加入小米监控团队有半年时间了，能与领域里的牛人们共事，很开心。当然，时不时会想起am团队的童鞋。闲话不多说了，今天介绍下小米的监控产品[Falcon](https://github.com/open-falcon)。
@@ -124,7 +125,8 @@ Agent支持的基础采集项，基本能覆盖到常见的监控需求。但仍
 	endpoint=hostA && metric=df.bytes.free.percent && mount=/root< 5%
 
 ```
-另外，在Dashboard中，可以借助于tags，把tags作为筛选过滤条件，更方便用户查看自己关心的指标。
+另外，在Dashboard中，可以借助于tags，把tags作为筛选过滤条件，更方便用户查看自己关心的指标。
+
 
 
 ## 数据收集
