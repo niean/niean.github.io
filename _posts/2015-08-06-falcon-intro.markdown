@@ -3,7 +3,6 @@ layout: post
 title: 小米监控系统Falcon简析
 date: 2015-08-06 20:00
 tags:
-  - monitor
   - falcon
 ---
 
