@@ -1,0 +1,107 @@
+---
+layout: post
+title: Golang依赖库的版本管理
+date: 2015-09-10 20:00
+tags:
+  - golang
+  - godep
+---
+
+在参与Github开源项目[Open-Falcon](https://github.com/open-falcon)开发期间，经常遇到这样的问题: 项目代码升级后，用户在进行源码编译时，因为不能指定正确版本的依赖库，导致源码编译失败，造成了很多困扰。
+
+Golang对Github的支持比较友好，但对依赖文件的版本管理能力较弱，无法自动记录依赖库的版本、无法方便的配置依赖库的版本。Godep这个小工具，很好地解决了Golang的这个问题。
+
+## 官方资料
+Godep的Github主页，见[这里](https://github.com/tools/godep)。
+
+Godep的功能介绍、常见问题等，请参照其[官方文档](https://github.com/tools/godep/blob/master/Readme.md)。
+
+
+## 使用Godep
+在Open-Falcon工程（下面简称为工程）开发的后期，我们开始引入Godep。使用Godep的主要过程，如下。我们的资源/版本管理工具为Github。
+
+### 保存依赖库的版本信息，至配置文件
+在把工程发布到Github之前，保存各个依赖库的版本信息，至一个配置文件中。
+
+完成调试、编译通过后，在本地的工程目录下运行`godep save`，Godep就会帮我们生成一个文件夹`./Godep`，其中文件`./Godeps/Godeps.json`记录了工程依赖库的版本信息。我们把这个版本配置文件留下来、保存到工程的repo中，移除掉其他的文件或文件夹(放入.gitignore即可)——我们只想要得到版本配置文件。
+
+这样，通过Godep，我们几乎可以自动的生成&保存各个依赖库的版本信息，并作为配置文件、发布到Github。你也可以手动修改版本配置文件的内容，但不推荐这样做。版本配置文件的内容示例，见[附录1](#appendix.godeps.json)。
+
+
+### 使用版本配置文件，更新依赖库
+源码编译时，从Github的repo下载工程源码，根据版本配置文件规定的版本，来更新工程的依赖库。
+
+在本地的工程目录下，运行`godep restore`，Godep工具会按照版本配置文件`./Godeps/Godeps.json`配置的版本，更新各个依赖库。
+
+### 封装Godep指令
+为了方便使用，我们把Godep的常用指令，封装在了Shell脚本`./control`中，相关内容如下。保存依赖库版本信息时，运行`bash ./control save`即可，以此类推。
+
+```bash
+	#!/bin/bash
+
+	## dependencies
+	function save_dependencies(){
+	    godep save
+	}
+
+	function restore_dependencies(){
+	    godep restore
+	}
+
+	function show_dependencies(){
+	    dependencies_file="./Godeps/Godeps.json"
+	    if [ ! -f $dependencies_file ]; then
+	        echo -e "godeps: dependencies'file not found"
+	        exit 1
+	    fi
+
+	    cat $dependencies_file
+	}
+
+	## usage
+	function usage() {
+	    echo "$0 build|pack|packbin|start|stop|restart|status|tail|version|save|restore|show"
+	}
+
+	## main
+	action=$1
+	case $action in
+	    "save" )
+	        save_dependencies
+	        ;;
+	    "restore" )
+	        restore_dependencies
+	        ;;
+	    "show" )
+	        show_dependencies
+	        ;;
+	    * )
+	        usage
+	        ;;
+	esac
+
+```
+
+
+## 附录
+1. <span id="appendix.godeps.json">一个版本配置文件Godeps.json，内容大体如下
+
+```json
+{
+	"ImportPath": "github.com/open-falcon/transfer",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/negroni",
+			"Rev": "2b6e86bff68451fcd38bd9e2da90e0b70e85983d" // SHA,可以手工修改这里的版本
+		},
+		{
+			"ImportPath": "github.com/unrolled/render",
+			"Rev": "26b4e3aac686940fe29521545afad9966ddfc80c"
+		}
+	]
+}
+
+```
+
+ 
