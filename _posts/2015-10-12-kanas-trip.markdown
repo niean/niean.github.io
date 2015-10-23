@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2015年国庆喀纳斯旅游攻略
+title: 2015年国庆喀纳斯旅游手记
 date: 2015-10-12 22:00
 tags:
   - kanas
@@ -44,26 +44,176 @@ tags:
 
 乌市的治安相当可以。主要街道上，目测500米一个警戒点警，警察也是部分或者全副武装；客运站、大型商场，进入前都要开包安检(执行貌似不是太严格)。入疆前的过分担忧，减少了许多。
 
+乌市至布尔津的大巴车，凌晨02:00左右在高速路旁停留了3个小时，早上05:00才再次出发，08:30左右到达布尔津县城。车内比较热，各种味道，睡着也不太舒服，失眠了。建议，一定要努力买到卧铺车票。
 
-[甘肃西部的戈壁滩，刚下过雪]
-![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.01.png)
+**D03 10-01**
 
-[同行的小伙伴之一。2006年在大学相识，从此开启了基友之旅~]
-![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.02.png)
+长途客运在早上08:30到达布尔津县城。刚下车，一堆私家车主就围上来拉客，价钱都差不多，随便找了一个，每人100元，送到禾木村景区门口。然后和小伙伴们一起吃了一点早餐(记得是肉夹馍，略难吃)，买了必备的矿泉水、巧克力、烟等。私家车师傅，又去拉了一个回族姑娘，大概10:00左右出发去禾木了。
 
+布尔津到禾木，前60%是平路，路旁景色很美(木有拍照呜呜)。后40%都在大山里绕来绕去，限速40左右(很可能是因为，5天前这里刚下过大雪，交通管制还没放开)，上路这一段，可以要求师傅停靠路边、拍照，因为5天前的雪还没完全融化，景色倒也算是挺美。
+
+车辆只能开到禾木村景区门口，景区内部只允许区间车通行，整个喀纳斯景区都是这个情况。景区门票，要和区间车门票一起买。在门口买票，乘坐区间车，行驶十几公里，到达禾木村。下车后，会有很多当地村民来推介住宿、饭馆等，住宿都是木屋。我们找了一家临近禾木村小河(不知其名)的木屋住下，费用为每人每晚100元，每人一个床位，有暖气(很多是没有暖气的，因此入住之前要问清楚)，店主提供热水，洗漱在不远处的另一个院落，厕所搭在河边、很简陋。整理好行李后，小伙伴们一起，顺着小河溜达，比较清静，景色感觉一般般吧，跨河铁板桥上景色还可以。然后，爬上了观看晨雾的小山腰，几百米高，这里算是一个小草原，雪山、枯草、白桦树、绿叶松，景色很惬意，人有点多。傍晚时分，准备看夕阳，西面山多且高，几乎不能看到落日，只能带着失望下山了。
+
+晚上在一家饭馆用膳。这里的餐厅，卫生条件普遍差，饭菜口味也一般，景区路远、也不能要求太多。我们草草的吃完晚饭，平均每人一个炒菜、一碗米饭，价格大概150左右。
+
+22:00之后，这里步入了夜的模式，很宁静。室外气温在零下5度吧，穿着羽绒服、冲锋衣，刚刚好。我们一起走到木屋外面，欣赏久别的夜空，银河依稀可见，流星的轨迹也很清晰、温和。想起了儿时和妈妈一起看夜空的时光。约莫1个小时后，我们回屋休息了。
+
+这一天，自然景色没有太出彩的地方，倒是这里的宁静，让人无限神往。
+
+
+**D04 10-02**
+
+早上06:30起床，动身去看晨雾。昨天已经爬过一遍，对上山腰的路很熟悉。到了山腰，发现人已经很多。今天的天气不错，太阳出来的十几分钟时间里，禾木村整个的笼罩在一抹晨雾(或者晨烟)中，很美。可惜大家都在拍照，没有几个专心欣赏景色的。半上午的时候，我们沿着山腰的北面小路下山了(我们是从南面台阶上山的)，一路景色一般。
+
+下山后，我们吃了一些早点，油条、鸡蛋、小米粥，差不多每人20元。然后，在禾木村的游客中心，乘坐区间车，直奔贾登峪，区间车票价每人100元。后来挺多，这躺车本该上午09:00发车，因为人不够，所以才等到了11:00左右，想想，我们也是挺幸运的。
+
+下午13:00左右到达了贾登峪，买票进景区。在贾登峪的卖票口，很多拉住宿的当地牧民，我们选了一个每人每晚100大洋的毡房。喀纳斯景区，最值得关注的景点为"观鱼台"和"三湾"。"观鱼台"适合下午观看，顺光，能够欣赏到喀纳斯湖全景；"三湾"适合上午观看，有晨雾，光线也较好。可惜，我们没有按照这个常规来，今天的下午去了"三湾"、没有去"观鱼台"，而接下来的几天天气变阴霾、我们再没有机会看到最美的喀纳斯湖全景了，这是后话。下午天气晴朗，我们欣赏到了很美的景色。乘坐区间车一直到了第一个景点卧龙湾，碧水蓝天，雪山森林，很美。我们从卧龙湾处下了山坡，沿着喀纳斯河下游走了半小时，来到双桥，正好赶上牛群过桥。从双桥上坡，沿着区间车道，驶回卧龙停车点，然后坐上区间车，一次游览了月亮湾、神仙湾，月亮湾值得一看，神仙湾较差、我们干脆在坡地上吃起了瓜子，呵呵。
+
+17:00左右到了游客中心，客栈老板已经在等候我们了；我们的客栈在喀纳斯景区偏东的小山上，离游客中心1.5公里左右。入住客栈，放好东西，然后去外面看夕阳:上脚下和半山腰上长满了西伯利亚落叶松，黄灿灿的，行人稀少，偶尔几头放牧的牲畜，宁静的环境，配着一轮夕阳和袅袅炊烟，真的美极了。
+
+晚餐是客栈老板娘帮忙做的，主要食材是米饭、西红柿、土豆、白菜、萝卜等，味道不错，还便宜，平均每人35元左右。吃完晚饭后，我便赖在床上了；小伙伴们则偷偷拜访了附近的一个图佤族人家，聊的很高兴，还借来了图佤族的传统服装。23:00左右开始睡觉了，因为住的是毡房、只有一张大大的床、可以睡下10+个人，男女同床共枕，晚上较冷，我们都盖了两层被子。顺便说一句，今天在禾木村遇到了一位厦门的大姐，一直和我们一起行动，她给我们带来了很多欢乐，感谢。
+
+**D05 10-03**
+
+造成08:00点起床，天还没亮。挨到了09:00点，老板娘给做了简单地早餐，煮挂面，每人15元。天阴沉沉的。上午接着去欣赏"三湾"。建议跳过神仙湾，因为没什么特色。我们从月亮湾景点下坡，沿河，一直走到了卧龙湾，然后从卧龙湾的停车点上车、回了客栈，已经是中午时分。午饭在客栈解决，食材减少为米饭、白菜、土豆、西红柿，依然每位35元左右。下午去喀纳斯湖，以大家的经验，喀纳斯湖应该很漂亮，特别是观鱼台，可惜，天公不作美，一直在下雨，我们只在湖边步行区域转了转、没有去观鱼台；据说，去观鱼台要在游客中心另外买票，180元左右。晚上回到客栈，晚饭依旧，餐后和同行的小伙伴们完了几圈斗地主，23:00点准时睡觉；晚上，我们挪到了小木屋，单人床，每人每晚80元，只有一床被子，担心怕冷、穿着毛衣睡觉的。
+
+**D06 10-04**
+
+早上08:00离开客栈，去游客中办理去白哈巴村的边防证。结果去早了，09:30才能办理。在游客中心吃了一份早餐，馒头、鸡蛋、咸菜，每份25元。在游客中心，购买去白哈巴的单程区间车票，每人62元，早上09:00开始售票。等到09:30，去游客中心旁的派出所，办理边防证，就是一张条子、办理起来很简单。
+
+区间车大概要2个小时才能到白哈巴村。我们中间行程出了点意外，被边防所扣留了2个小时，临近中午才到了白哈巴村。临近白哈巴村时，要购买景区门票，每人50元门票+20元古村落保护费。我们的区间车把游客放在了白哈巴村的小集市上，离村子还有一小段举例。我们在集市上，找了一辆越野车，包车去五号界碑，每个人30元。国庆期间，五号界碑交通管制，只有本地的牧民才能把游客带进去，奇葩的规定。五号界碑及其周围的景色很美，虽然天气阴沉，但也挡不住我们拍照的欲望，呵呵，在这里停留了1小时左右。
+
+14:00左右，我们回到白哈巴村口。村口的高地上竖立着"西北第一村"的石碑，在这里适合俯视村庄的全景，略壮观。在丁字路口附近，吃了几口午餐，全素菜，每人40元左右。午餐之前已经在村子里找了一辆到哈巴河县的私家车，每个人90大洋；据说早晨10:00和下午14:00，各有一趟去哈巴河县的长途客车，每人100元，我们没有赶上，所以找了私家车。从喀纳斯景区到哈巴河县，有三分之二的路程在山区、一旦出了山区就不用再担心大雪封山了；途经了中哈边境大峡谷、白哈巴国家地质公园等景点，很美，司机师傅很好、每个景点都会停车让我们拍照。17:00左右到了哈巴河县，入住了客运中心附近的一家宾馆，平均每人每天100元。
+
+入住宾馆后，我们先到客运中心，买了次日去乌鲁木齐的夜间长途客运，每人190大洋。原计划从哈巴河到布尔津，看五彩滩，天气实在太差，我们放弃了这个计划。晚饭，找了一家当地很有名的土鸡大盘鸡馆子，就在客运站西面不远，三个人、点了一个大盘鸡和几瓶啤酒，每人50元左右，大盘鸡略辣、味道很赞。宾馆有洗浴，暖气，睡得不错。顺便提一句，在禾木、喀纳斯、白哈巴的这几天，不能洗澡（也没必要洗澡）。
+
+**D07 10-05**
+
+外面的天依然灰蒙蒙的。县城里，生活设施比较完善了，早餐很容易搞定。上午蜷缩在宾馆的床上，听听歌，看看视频，好好地享受这难得的休闲时光。下午打车去了白哈巴县西面的白桦林森林公园，转了2个小时左右，然后步行回到白哈巴客运中心，赶在18:00前入站检票上车。哈巴河县景色还是挺美的，气候也还可以，生活在这里的人应该挺幸福。客车从哈巴河县出发，经由布尔津，到乌鲁木齐的碾子沟客运站；中途经过了五彩滩，当时太阳正好射穿了乌云、打在五彩滩的石头上，略美丽；一路上，风车发电机成群结队的分布着，蔚为壮观。凌晨左右，客车停靠高速公路休息带有大约3个小时，天明时分又出发了。
+
+**D08 10-06**
+
+天山天池一日游。台湾妹纸。天山之恋。
+
+**D09 10-07**
+
+上午休息，下午游览新疆博物馆，傍晚茶庄休闲。
+
+**D10-11 10-08至10-09**
+
+08号上午10:00点左右，登上返程的列车。一路温馨。09号晚上20:00左右抵达北京。新疆之行完美收官。
 
 ## 基本常识
 + 乌市和北京有2小时时差。也就是说，乌市的20:00，相当于北京的18:00
 
 
-## 踩过的坑
+## 吃过的亏
 + 没有提前预定乌鲁木齐至北京的返程火车票，导致整体多消耗了2天时间
 + 没有提前预定乌鲁木齐至北屯的火车票，导致不得不做夜间巴士到布尔津
 + 禾木村区间车，应该买单程、而不应该买往返，因为可以从禾木村直接坐车至喀纳斯景区。此处每人浪费了50元
+
+## 一路风景
+
+[甘肃西部的戈壁滩，刚下过雪]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.01.png)
+
+[同行的小伙伴之一。2006年在大学相识，从此开启了好基友之旅]
+![on.the.train.west.companies.hongbo](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.02.png)
+
+[禾木村景区，小河和木屋]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1001.01.png)
+
+[禾木村景区，跨河铁桥]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1001.02.png)
+
+[禾木村景区，从山腰上俯视小河]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1001.03.png)
+
+[禾木村景区，小山腰上的草原]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1001.04.png)
+
+[禾木村景区，早晨，上山的台阶上]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.01.png)
+
+[禾木村景区，早晨，禾木晨雾，手机直拍、像素太低了，汗]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.02.png)
+
+[禾木村景区，早晨，再来一张草原照]
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.03.png)
+
+[喀纳斯景区，下午的卧龙湾]
+![kanas.wolongwan](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.04.png)
+
+[喀纳斯景区，下午的双桥]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.05.png)
+
+[喀纳斯景区，我的位置]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.06.png)
+
+[喀纳斯景区，宁静的黄昏，夕阳]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1002.07.png)
+
+[喀纳斯景区，清晨，我们住的哈萨克牧民毡房]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.01.png)
+
+[喀纳斯景区，上午，阴沉沉的天，上坡上俯视月亮湾]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.02.png)
+
+[喀纳斯景区，上午，近距离接触月亮湾]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.03.png)
+
+[喀纳斯景区，上午，卧龙湾的沿岸]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.04.png)
+
+[喀纳斯景区，下午，细雨中的喀纳斯湖]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.05.png)
+
+[喀纳斯景区，下午，喀纳斯湖黑云压城]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1003.06.png)
+
+[喀纳斯景区，大清早，木屋客栈]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.01.png)
+
+[白哈巴村，中哈边境，五号界碑]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.03.png)
+
+[白哈巴村，中哈边境，五号界碑旁边的哈巴河]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.02.png)
+
+[白哈巴村，鸟瞰白哈巴村]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.04.png)
+
+[白哈巴村，中哈边境大峡谷]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.05.png)
+
+[白哈巴村，白哈巴国家地质公园]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1004.06.png)
+
+[布尔津县，宾馆前的小公园，这里已经是深秋了]
+![kanas.bridges](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1005.01.png)
+
+[乌鲁木齐，天山天池]
+![tianshan.tianchi](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1006.01.png)
+
+[乌鲁木齐，从天山顶俯瞰天池]
+![tianshan,tianshan](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1006.04.png)
+
+[乌鲁木齐，天山的一个顶峰]
+![tianshan,tianshan](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1006.02.png)
+
+[乌鲁木齐，天山顶峰的阴面]
+![tianshan,tianshan](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1006.05.png)
+
+[乌鲁木齐，新疆博物馆]
+![tianshan,tianshan](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/1007.01.png)
+
 
 ## 鸣谢
 在旅行的路上，我收获了期盼已久的爱情。感谢新疆，感谢同行的小伙伴们!!
 
 ![companies](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/companies.2.png)
+
+
+
 
 
