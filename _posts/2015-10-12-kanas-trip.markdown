@@ -143,7 +143,7 @@ tags:
 ## 旅途中的风景
 
 [甘肃西部的戈壁滩，刚下过雪]
-![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.01.png)
+![on.the.train.west](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.01.png)
 
 [同行的小伙伴之一。2006年在大学相识，从此开启了好基友之旅]
 ![on.the.train.west.companies.hongbo](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20151012/0929.02.png)
