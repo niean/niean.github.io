@@ -4,6 +4,7 @@ title: 运维权限系统
 date: 2016-01-31 18:00
 tags:
   - rbac
+  - tech
 ---
 
 年关将近，终于有了一点时间。研究了下小米的运维权限体系，结合自己过往的经验，整理了下运维权限系统相关的设计思路。欢迎各位行家拍砖。
@@ -12,31 +13,31 @@ tags:
 
 访问控制，是针对越权使用资源的防御措施。企业环境中的访问控制策略一般有三种：自主型访问控制方法、强制型访问控制方法和基于角色的访问控制方法（Role-Based Access Control, RBAC）。其中，自主式太弱，强制式太强，RBAC是目前公认的、解决企业统一资源访问控制的有效方法。
 
-RBAC以角色为中心，进行访问策略的控制。例如，在一个医院系统中，医生角色可以诊断、开据处方、指示实验室化验等；研究员角色只能收集用于研究的匿名临床信息。NIST（The National Institute of Standards and Technology，美国国家标准与技术研究院）标准RBAC模型由4个部件模型组成，这4个部件模型分别是基本模型RBAC0（Core RBAC）、角色分级模型RBAC1（Hierarchal RBAC）、角色限制模型RBAC2（Constraint RBAC）和统一模型RBAC3（Combines RBAC）[[1]](http://blog.csdn.net/chjttony/article/details/6229078)。
+RBAC以角色为中心，进行访问策略的控制。例如，在一个医院系统中，医生角色可以诊断、开据处方、指示实验室化验等；研究员角色只能收集用于研究的匿名临床信息。NIST(The National Institute of Standards and Technology，美国国家标准与技术研究院)标准RBAC有4个模型，分别是基本模型RBAC0(Core RBAC)、角色分级模型RBAC1(Hierarchal RBAC)、角色限制模型RBAC2(Constraint RBAC)和统一模型RBAC3(Combines RBAC)[[1]](http://blog.csdn.net/chjttony/article/details/6229078)。
 
 ### RBAC0
 RBAC0定义了RBAC控制系统的最小元素集合，包括用户(user)、角色(role)、权限(permission)、资源(resouce)、操作(operation)，模型如下，
 
 ![rbac0.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/rbac0.png)
 
-在RBAC0模型中，主要关系有两种，分配角色权限PA(Permission Assignment)、分配用户角色UA(Users Assignment)。PA实现操作和角色之间的关联关系映射，UA实现用户和角色之间的关联关系映射。
+在RBAC0模型中，主要关系有两种，为角色分配权限PA(Permission Assignment)、分配角色给用户UA(Users Assignment)。PA实现权限和角色之间的关联关系，UA实现用户和角色之间的关联关系。
 
 在RBAC0模型中，资源的定义，需要注意以下两个问题[[2]](http://www.cnblogs.com/ttcre2/archive/2008/07/24/1250591.html)：
 
-1. RBAC0中的资源，指的是资源类别(resouce class)、而不是某个特定资源的实例(resouce instance)，**权限管理系统 需要对于资源类别进行权限管理，而应用系统 需要对特定资源实例进行权限管理**。因为对资源实例的访问控制，通常带有较多个性化的业务逻辑、不适合放在高度抽象的权限管理系统。
-2. RBAC0中的资源，是一级扁平化的。在生产环境下，资源可能具有层次关系和包含关系，可以将这种层级关系 降级为 一级扁平结构。
+1. RBAC0中的资源，指的是资源类别(resouce class)、而不是某个特定资源的实例(resouce instance)，**权限管理系统负责 资源类别之权限 的管理，而应用系统负责 特定资源实例之权限 的管理**。因为，对资源实例的访问控制，通常带有较多个性化的业务逻辑、不适合放在高度抽象的权限管理系统中。
+2. RBAC0中的资源，是一级扁平化的。在生产环境下，资源可能具有层次关系和包含关系，需要将这种层级关系 降为 一级扁平结构。
 
 RBAC的其他模型，都是在RBAC0的基础上，演化而来的。
 
 ### RBAC1
-RBAC1引入了，角色间的继承关系，被继承的主要是操作权限。角色间的继承关系，可分为一般继承关系和受限继承关系。一般继承关系仅要求角色继承关系是一个绝对偏序关系、允许角色间的多继承(类似有向无环图)。而受限继承关系则进一步要求角色继承关系是一个树结构。
+RBAC1引入了，角色间的继承关系，被继承的是 一个个的权限点。角色间的继承关系，可分为一般继承关系和受限继承关系。一般继承关系仅要求角色继承关系是一个绝对偏序关系、允许角色间的多继承(类似有向无环图)。而受限继承关系则进一步要求角色继承关系是一个树结构。
 
 ![rbac1.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/rbac1.png)
 
-在RBAC1模型中，角色继承可以借助外部已有系统实现。
+在RBAC1模型中，角色继承常常借助外部已有系统来实现。
 
 ### RBAC2
-RBAC2模型中添加了责任分离关系。RBAC2的约束规定了权限被赋予角色时,或角色被赋予用户时,以及当用户在某一时刻激活一个角色时所应遵循的强制性规则。约束与用户-角色-权限关系一起，决定了RBAC2模型中用户的访问权限。
+RBAC2模型中添加了责任分离关系。RBAC2的约束规定了权限被赋予角色时,或角色被赋予用户时,以及当用户在某一时刻激活一个角色时所应遵循的强制性规则。约束与`用户-角色-权限`关系一起，决定了RBAC2模型中用户的访问权限。
 
 ![rbac2.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/rbac2.png)
 
@@ -44,33 +45,33 @@ RBAC2模型中添加了责任分离关系。RBAC2的约束规定了权限被赋�
 RBAC3包含了RBAC1和RBAC2，既提供了角色继承，又提供了责任分离关系。
 ![rbac3.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/rbac3.png)
 
-以**业务树**为核心的运维体系，其权限系统一般会采用"**RBAC3+受限继承+业务约束**"模型，且角色继承一般借助业务树来完成、业务约束也借助服务树来实现。这正是本文的情况。
+以**业务树**为核心的运维体系，其权限系统一般会采用**RBAC3**模型，且角色继承借助业务树来完成、约束也借助服务树来实现。
 
 
 ## 运维权限系统
 本文适合，**以业务树为核心的**，运维体系。对于不以业务树为核心的运维体系，本文不一定可用。
 
 ### 业务树
-业务树，以树状的上下层级模式，展示公司内部的各个业务。业务树是公司业务的高度抽象，是各运维子系统与公司业务发生耦合的纽带，是各运维子系统彼此交互的统一协议。小米公司的业务树，结构如下图所示，
+业务树，以树状的上下层级模式，展示公司内部的各个业务。业务树是公司业务的高度抽象，是各运维子系统与公司业务发生耦合的纽带，是各运维子系统彼此交互的统一协议平台。一个典型的业务树，结构如下图所示，
 ![tree.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/tree.png)
 
 ### 模型设计
 权限系统的设计，取决于其滋生的业务环境。根据运维系统的业务特性，运维权限系统特点如下：
 
-1. 资源类型少，操作少，因此，可以穷举所有的权限点。变更角色时，可以从所有权限点中勾选想要的
-2. 权限点较少，运维业务场景相对固定且较少，因此，可以预定义绝大部分角色。甚至，可以不允许增删角色
-3. 借助业务树的层级关系，实现角色的向上继承、向上覆盖。考虑到安全性，角色的向上覆盖只支持减少权限点、不支持增加权限点
+1. 资源类型少，操作少，因此，可以穷举所有的权限点。甚至，增加角色时，可以从所有权限点中进行勾选
+2. 权限点较少，运维业务场景相对固定且较少，因此，可以预定义绝大部分角色。甚至可以，不允许增删角色、只允许通过继承和覆盖来定制角色权限
+3. 借助业务树的层级关系，实现角色的向上继承、向上覆盖
 4. 权限系统的约束关系，大部分与业务规范、安全控制有关， 更适合在代码中实现
 
-结合上述特点，采用RBAC3模型，设计出运维权限系统的核心表结构，如下图，其中，
+结合上述特点，采用RBAC3模型，设计出运维权限系统的核心表结构，如下图，
 
 ![mysql.schema.png](https://raw.githubusercontent.com/niean/niean.common.store/master/images/devops/rbac/mysql.schema.png)
 
 上述表结构设计，有如下关键点，
 
-+ 用户user、角色role、权限点permission是权限模型中的元素，用户角色关系表`r_user_role`记录了UA的结果，角色权限表`r_role_permission`记录了PA的结果。
-+ 资源resource和操作operation，合并到权限点表permission中。因为，资源和操作组成的权限点相对较少、相对固定，没有比较将资源和操作拆出来、独立成表。
-+ 角色表role中有一个tag字段。tag是业务树节点的有序字符串描述，易于存储、同时又保留了业务树的层级信息，可以辅助实现角色的继承、覆盖等逻辑。
++ 用户user、角色role、权限点permission是权限模型中的元素，用户角色关系表`r_user_role`记录了UA的结果，角色权限表`r_role_permission`记录了PA的结果
++ 资源resource和操作operation，合并到权限点表permission中。因为，资源和操作组成的权限点相对较少、相对固定，没有必要将资源和操作拆出来、独立成表
++ 角色表role中有一个tag字段。tag是业务树节点的有序字符串描述，易于存储、同时又保留了业务树的层级信息，可以辅助实现角色的继承、覆盖等逻辑，可以适配不同公司的业务树结构
 
 ### 角色
 运维系统，主要面向不同层次的开发和运维人员。因此，常用角色包括，
@@ -79,8 +80,9 @@ RBAC3包含了RBAC1和RBAC2，既提供了角色继承，又提供了责任分�
 |:----|:----|:----|
 |普通成员|dev.member|sre.member|
 |管理员|dev.admin|sre.admin|
+|...|...|...|
 
-其中，dev.member、dev.admin、sre.member、sre.admin是 权限系统预定义的 角色。
+其中，dev.member、dev.admin、sre.member、sre.admin可以是 权限系统预定义的 角色。
 
 ### 权限点
 运维系统的权限点，以不同的运维子系统为核心，包括但不限于，
@@ -115,6 +117,7 @@ insert into `r_role_permission` values (null, $rid, $permissionId);
 UA。考虑到角色继承，我们会说，将 业务节点`cop.xiaomi_owt.inf`上的 普通开发人员 "dev.common"角色，授予，用户 "niean"。对应的数据库操作为，
 
 ```sql
+# rid=`role`.getIdOfRole('cop.xiaomi_owt.inf', 'dev.common')
 # uid=`user`.getIdOfUser('niean')
 insert into `r_user_role` values (null, $rid, $uid);
 
@@ -126,7 +129,7 @@ insert into `r_user_role` values (null, $rid, $uid);
 例如，用户"niean" 在业务树节点`cop.xiaomi_owt.inf`上 具有 普通开发人员"dev.common"的角色。那么用户"niean" 在业务树节点`cop.xiaomi_owt.inf_pdl.falcon`上 也具有普通开发人员"dev.common"的角色，且具有相同的权限点。
 
 ### 角色覆盖
-角色覆盖，依赖业务树的层级结构，**向上覆盖**。
+角色覆盖，依赖业务树的层级结构，**向上覆盖**。考虑到安全性，角色覆盖时，对应的权限点只减少、不增加。这是运维规范的一部分，有利于提高安全性。
 
 例如，业务树节点`cop.xiaomi_owt.inf`上 绑定了一个 普通开发人员"dev.common"的角色。根据业务需要，业务树节点`cop.xiaomi_owt.inf_pdl.falcon`上的 普通开发人员"dev.common"角色，不允许发起部署任务("部署系统.任务:X")，于是，我们需要在业务树节点`cop.xiaomi_owt.inf_pdl.falcon`上 重新定义 普通开发人员"dev.common" 的 权限点、减少权限点"部署系统.任务:X"。
 
@@ -135,7 +138,7 @@ insert into `r_user_role` values (null, $rid, $uid);
 |`cop.xiaomi_owt.inf`|监控系统.绘图:R, 部署系统.任务:R, 部署系统.任务:X, ...|
 |`cop.xiaomi_owt.inf_pdl.falcon`|监控系统.绘图:R, 部署系统.任务:R, ...|
 
-角色覆盖时，角色对应的权限点只减少、不增加，这是运维规范的一部分，有利于提高安全性。
+通常，我们在业务树的根节点`cop.xiaomi`，授予，各角色以最大权限；同时，我们在业务树子节点，以覆盖的方式，重新定义一些角色的权限。这样，既可以 让用户方便地 在各业务树子节点**获取权限**，又可以 让用户方便地在各业务树节点**定制权限**。
 
 ### 验权
 典型的验权场景，如下。

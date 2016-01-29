@@ -1,9 +1,10 @@
 ---
 layout: post
-title: 小米监控系统Falcon自监控实践
+title: 监控系统Falcon自监控实践
 date: 2015-08-16 18:00
 tags:
   - falcon
+  - tech
 ---
 
 监控系统，通常被用于监控其他系统的状态。那么，监控系统的状态，怎么来监控？

@@ -4,6 +4,7 @@ title: RRDTool实践经验整理
 date: 2015-08-26 18:00
 tags:
   - rrdtool
+  - tech
 ---
 
 在小米开发Falcon期间，经常要和rrdtool打交道。把了解到的一些 系统原理、使用经验&教训记录在这里。不定期更新。

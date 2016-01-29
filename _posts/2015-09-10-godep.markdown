@@ -5,6 +5,7 @@ date: 2015-09-10 20:00
 tags:
   - golang
   - godep
+  - tech
 ---
 
 在参与Github开源项目[Open-Falcon](https://github.com/open-falcon)开发期间，经常遇到这样的问题: 项目代码升级后，用户在进行源码编译时，因为不能指定正确版本的依赖库，导致源码编译失败，造成了很多困扰。

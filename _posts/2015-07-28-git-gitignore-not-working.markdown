@@ -4,6 +4,7 @@ title: 配置.gitignore后不起作用
 date: 2015-07-28 18:00
 tags:
   - git
+  - tech
 ---
 
 ### 问题现象
