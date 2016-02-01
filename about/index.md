@@ -1,5 +1,5 @@
 ---
-title: About
+title: 作者
 layout: page
 comments: yes
 ---

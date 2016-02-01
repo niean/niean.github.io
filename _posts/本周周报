@@ -1,0 +1,9 @@
+### 本周周报
+ * 【监控】Falcon：gateway接入部署系统,解决配置分区的问题 `聂安 done`
+ * 【监控】Falcon：实时报警多活方案规划 `聂安 子兮 doing`
+
+ * 【监控】Open-Falcon：网络分区内配置代理hbs-proxy `聂安 done`
+
+### 下周计划
+ * 【监控】Falcon：实时报警多活方案 `聂安 子兮` 
+ * 【监控】Open-Falcon：judge报警历史查询 `聂安`
