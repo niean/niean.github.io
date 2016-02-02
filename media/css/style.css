@@ -24,8 +24,33 @@ body {
 }
 
 *{padding:0;margin: 0;border:none;outline:none;}
-a{color:#dd0000;text-decoration:none;}
-a:hover{color:#333333;text-decoration:underline;}
+a {
+  color: #003399;
+  text-decoration: none;
+}
+a:hover {
+  color: #6699ff;
+  text-decoration: underline;
+}
+
+.listing-item,.listing-seperator{
+  list-style-type: none;
+}
+.listing-item a {
+  padding: .2em 1em;
+  color: #333333;
+}
+.listing-item a:hover {
+  color: #003399;
+}
+.listing-item time {
+  color: #999999;
+}
+.listing-seperator{
+  font-weight: bold;
+}
+
+
 hr{margin:.7em 0;border-top:1px dashed #d0d0d0;border-bottom:1px dashed #f9f9f9;}
 p{padding:.5em 0;}
 li{padding:.2em 0;}
@@ -40,21 +65,12 @@ blockquote p{margin:0;padding:.5em 0;}
 .content img{max-width:750px;display:block;margin:4px auto;-webkit-box-shadow:#999 1px 1px 4px;-moz-box-shadow:#999 1px 1px 4px;box-shadow:#999 1px 1px 4px;}
 #tag_cloud{margin-bottom: 1em;}
 #tag_cloud a:hover{color:#333333 !important;text-decoration:none;}
-.listing-item,.listing-seperator{list-style-type:none;}
-.listing-item a{
-	padding:.2em 1em;
 
-}
-
-.listing-item time{color:#999999;}
-.listing-seperator{font-weight:bold;}
 .meta{text-align:right;font-size:12px;}
 .pageNav{font-weight:bold;font-size:17px;}
 .pageNavInvalid{font-weight:bold;font-size:17px;color:#D0D0D0;}
 header{padding:.5em 0;border-bottom: 1px solid #cccccc;}
-nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-12em;width:9em;text-align:right;}
-nav a{display:block;padding:.7em 1em;color:#000000;}
-nav a:hover{background-color:#ff0000;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
+
 .post{padding:.5em 0em;}
 
 embed,object,iframe{display:block;margin:4px auto;}
@@ -141,6 +157,28 @@ background: #83BF73;
 }
 
 /** modified by niean **/
+nav {
+  font-family: "Microsoft YaHei","Hiragino Sans GB","Cuprum",sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  float: left;
+  margin-left: -6em;
+  width: 5em;
+  text-align: right;
+}
+nav a {
+  display: block;
+  padding: .7em 1em;
+  color: #000000;
+}
+nav a:hover {
+  background-color: #999999;
+  text-decoration: none;
+  color: #f9f9f9;
+  font-weight: bold;
+  -webkit-transition: color .2s linear;
+}
+
 h1 {
   font-family: "Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-size: 1.6em;
