@@ -1,6 +1,6 @@
 ---
 layout: post
-title: first write
+title: first blog
 date: 2015-07-27 23:10
 tags:
 ---
