@@ -3,7 +3,6 @@ layout: post
 title: first write
 date: 2015-07-27 23:10
 tags:
-  - first
 ---
 
 新开的博客, 第一篇文章, 记在这里.
