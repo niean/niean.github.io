@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 监控系统Falcon简析
+title: 监控系统Falcon
 date: 2015-08-06 20:00
 tags:
   - falcon
