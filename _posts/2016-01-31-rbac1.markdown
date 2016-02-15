@@ -103,10 +103,10 @@ RBAC3包含了RBAC1和RBAC2，既提供了角色继承，又提供了责任分�
 PA。一般的，我们会说，把 权限"监控系统.策略:C"，授予 普通开发人员 "dev.member"。考虑到角色的继承、覆盖关系，我们会说，把 权限"监控系统.策略:C"，授予，业务节点`cop.xiaomi_owt.inf`上的 普通开发人员"dev.member"，接口定义如下，
 
 ```python
-@app.route("/tag/<string:$tag>/role/<string:$role>/permission/<string:$permission>/pa", methods=['POST'])
-def pa_tag_role_permission($tag, $role, $permission):
-	rid = get_or_create_role($tag, $role)
-	permissionId = get_or_create_permission($permission)
+@app.route("/tag/<string:tag>/role/<string:role>/permission/<string:permission>/pa", methods=['POST'])
+def pa_tag_role_permission(tag, role, permission):
+	rid = get_or_create_role(tag, role)
+	permissionId = get_or_create_permission(permission)
 	assign_permission_to_role(rid, permissionId)
 	
 ```
@@ -120,7 +120,7 @@ insert into `role` values (null, 'cop.xiaomi_owt.inf', 'dev.member') on duplicat
 insert into `permission` values (null, '监控系统.策略', 'C') on duplicate key update id=last_insert_id(id);
 # permissionId=`permission`. lastInsertId()
 
-insert into `r_role_permission` values (null, $rid, $permissionId);
+insert into `r_role_permission` values (null, rid, permissionId);
 
 ```
 
@@ -128,10 +128,10 @@ insert into `r_role_permission` values (null, $rid, $permissionId);
 UA。考虑到角色继承，我们会说，将 业务节点`cop.xiaomi_owt.inf`上的 普通开发人员 "dev.member"角色，授予，用户 "niean"，接口定义如下，
 
 ```python
-@app.route("/tag/<string:$tag>/role/<string:$role>/user/<string:$user>/ua", methods=['POST'])
-def ua_tag_role_user($tag, $role, $user):
-	rid = get_role($tag, $role)
-	uid = get_user($user)
+@app.route("/tag/<string:tag>/role/<string:role>/user/<string:user>/ua", methods=['POST'])
+def ua_tag_role_user(tag, role, user):
+	rid = get_role(tag, role)
+	uid = get_user(user)
 	assign_user_to_role(rid, uid)
 	
 ```
@@ -141,7 +141,7 @@ def ua_tag_role_user($tag, $role, $user):
 ```sql
 # rid=`role`.getIdOfRole('cop.xiaomi_owt.inf', 'dev.member')
 # uid=`user`.getIdOfUser('niean')
-insert into `r_user_role` values (null, $rid, $uid);
+insert into `r_user_role` values (null, rid, uid);
 
 ```
 
@@ -169,14 +169,12 @@ insert into `r_user_role` values (null, $rid, $uid);
 典型的验权场景，如下。
 
 ```python
-@app.route("/permission/user/<string:$user>/tag/<string:$tag>/permission/<string:$permission>/check", methods=['GET'])
-def check_user_tag_permission($user, $tag, $permission):
-	if $user's roles on $tag have $permisson:
+@app.route("/permission/user/<string:user>/tag/<string:tag>/permission/<string:permission>/check", methods=['GET'])
+def check_user_tag_permission(user, tag, permission):
+	if user's roles on tag have permisson:
 		return True
-	
-	if $user's roles on $tag's parents have $permisson:
+	if user's roles on tag's parents have permisson:
 		return True
-	
 	return False
 	
 ```
