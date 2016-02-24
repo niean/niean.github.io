@@ -4,3 +4,4 @@
 ## prj
 _site/
 backup/
+*.bak
