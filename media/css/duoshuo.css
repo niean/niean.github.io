@@ -1,0 +1,8 @@
+#ds-thread .ds-sync{display:none!important;}
+#ds-thread .ds-powered-by{display:none!important;}
+#ds-thread #ds-reset {margin-top:20px;}
+#ds-thread #ds-reset .ds-comments-info{display:none!important;}
+#ds-thread #ds-reset .ds-login-buttons{display:none!important;}
+#ds-thread #ds-reset .ds-comments{border-bottom:0px;}
+#ds-thread #ds-reset .ds-comment-actions .ds-post-repost{display:none!important;}
+#ds-thread #ds-reset .ds-comment-actions .ds-post-report{display:none!important;}

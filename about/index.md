@@ -1,7 +1,6 @@
 ---
 title: 作者
 layout: page
-comments: yes
 ---
 
 coder@beijing

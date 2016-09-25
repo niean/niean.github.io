@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="/media/css/highlight.css">
     <link rel="stylesheet" href="/media/css/font-awesome.min.css">
     <link rel="stylesheet" href="/media/css/pygments.css">
+    <link rel="stylesheet" href="/media/css/duoshuo.css">
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
   </head>
 
+  <!-- 删除时间格式化js
   <script type="text/javascript">
     Date.prototype.format = function(format)
 		{
@@ -34,7 +36,8 @@
     	return format;
 		}
   </script>
-
+  -->
+  
   <body>
     <div id="container">
       <div id="main" role="main">
@@ -51,12 +54,14 @@
         </article>
       </div>
 
+      <!-- 删除footer,精简页面
       <footer>
         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> & <a href="http://pages.github.com">GitHub</a>| Copyright 2015 - {{ site.time | date:"%Y" }} by <a href="/about/">{{ site.author }}</a></small></p>
       </footer>
-
+      -->
     </div>
 
+    <!-- 删除google分析
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34960818-1']);
@@ -67,5 +72,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    -->
   </body>
 </html>
