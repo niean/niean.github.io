@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 系统是这样做烂的
+title: 运维系统是这样做烂的
 date: 2016-09-10 23:00
 tags:
   - thoughts
