@@ -1,0 +1,39 @@
+---
+layout: post
+title: 运维部署系统
+date: 2016-11-13 13:00
+tags:
+  - system
+---
+
+部署系统是运维平台很关键的一部分，主要解决服务代码发布的问题。部署系统包含了一系列的控制、规范，旨在协助推行运维标准化工作。部署系统是rd或者op使用频率较高的系统，其产品体验不容忽视。
+
+以下是，最近半年多时间，在dd参与新部署系统实施，得到的一些经验和体会。该系统，主要解决`人操作上线`的场景，不解决`自定义|自动上线`等场景。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20161113/page.jpg)
+
+## 功能描述
+
+
+## 技术实现
+本节主要介绍 系统架构、模块框图、核心数据流&配置流等。
+
+#### 系统架构
+![arch.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20161113/arch.png)
+
+#### web
+![deploy.fsm.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20161113/deploy.fsm.png)
+
+#### build
+
+
+#### agent
+
+
+
+## 产品形态
+本节主要介绍，部署系统暴露给用户的ui及主要操作步骤。
+
+
+## 运维规范
+本节主要介绍，部署系统包含的一些运维规范。
