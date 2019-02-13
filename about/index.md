@@ -6,11 +6,11 @@ layout: page
 coder@beijing
 <br/>
 <br/>
-<span><i class="fa fa-github fa-lg"></i>&nbsp;&nbsp;<a title="github" href="http://github.com/niean">niean</a></span>
+<span>Github：<a title="github" href="http://github.com/niean">https://github.com/niean</a></span>
 <br/>
-<span><i class="fa fa-user fa-lg"></i>&nbsp;&nbsp;&nbsp;<a title="blog" href="http://blog.niean.name">blog</a>,<a title="note" href="http://note.niean.name">note</a></span>
+<span>技术博客：<a title="blog" href="http://blog.niean.name">http://blog.niean.name</a></span>
 <br/>
-<span><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;&nbsp;<a title="mail" href="#">niean.sail<i class="fa fa-at"></i>gmail.com</a></span>
+<span>日常笔记：<a title="blog" href="http://note.niean.name">http://note.niean.name</a></span>
 <br/>
-
-{% include pay.md %}
+<span>个人邮箱：<a title="mail" href="#">niean.sail<i class="fa fa-at"></i>gmail.com</a></span>
+<br/>
