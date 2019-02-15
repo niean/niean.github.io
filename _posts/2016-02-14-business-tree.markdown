@@ -3,7 +3,7 @@ layout: post
 title: 运维系统之松耦合设计
 date: 2016-02-14 13:14
 tags:
-  - system
+  - tools
 ---
 
 
