@@ -1,18 +1,16 @@
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" 
-		data-url="{{site.url}}{{ page.url }}"></div>
-<!-- 多说评论框 end -->
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.short_name }}"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+<!-- 评论组件 -->
+<div id="vcomments"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'ShNr2XWkaxBkkTGFNm8xs1kV-gzGzoHsz',
+        appKey: 'dsmuroUSX4cxbULTBqBzQJWS',
+        notify: false, 
+        verify: false, 
+        avatar: 'mm', 
+        visitor: true,
+        placeholder: 'go go go'
+    });
+</script>
