@@ -1,6 +1,6 @@
 ---
 layout: post
-title: XJ应用运维的价值和实现思考
+title: 应用运维的价值和实现思考
 date: 2019-02-16 16:00
 tags:
   - thoughts

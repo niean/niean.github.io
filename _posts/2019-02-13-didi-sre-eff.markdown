@@ -1,6 +1,6 @@
 ---
 layout: post
-title: XJ运维效率体系建设思路
+title: 运维效率体系建设思路
 date: 2019-02-13 16:00
 tags:
   - thoughts
