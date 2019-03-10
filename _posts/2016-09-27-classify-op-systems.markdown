@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 运维系统要区分用户特质
+title: 运维平台要区分用户特质
 date: 2016-09-27 21:30
 tags:
   - thoughts
