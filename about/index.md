@@ -10,7 +10,7 @@ coder@beijing
 <br/>
 <span>技术博客：<a title="blog" href="http://blog.niean.name">http://blog.niean.name</a></span>
 <br/>
-<span>日常笔记：<a title="blog" href="http://note.niean.name">http://note.niean.name</a></span>
+<span>日常随笔：<a title="blog" href="http://note.niean.name">http://note.niean.name</a></span>
 <br/>
 <span>个人邮箱：<a title="mail" href="#">niean.sail<i class="fa fa-at"></i>gmail.com</a></span>
 <br/>
