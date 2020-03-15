@@ -1,0 +1,15 @@
+---
+layout: post
+title: 运维工作的职责模型
+date: 2020-01-25 22:20
+tags:
+  - thoughts
+---
+
+## 导读
+年前和罗老师沟通，对运维这一工种的职责有了更完整的认知，记录于此。
+
+## 运维职责模型
+OP职责: 将工业制成品组装为服务，并维护其运转。工业制成品，包括硬件基础设施、软件基础设施、业务代码等。在维护服务运转的过程中，运维工作者需要追求稳定、效率、成本、性能、扩展性（多快好省）等，这构成了运维工作的主要内容。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20200125/op-model.png)
