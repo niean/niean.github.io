@@ -25,7 +25,7 @@ tags:
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201224/okr-parts.png)
 
 
-## 主要抓手
+## 常用抓手
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201224/okr-methods.png)
 
 
@@ -34,4 +34,3 @@ OKR制定，在遵循smart原则外，需要重点关注如下事项：
 
 - 重点工作要明确。设置1~2个关键OKR，占比不低于40%，做到重点投入；重点工作，一般来自老板目标的分解
 - 成果贡献需均衡。非开发岗位，运营工作占比不低于20~40%，以体现运维团队对"贡献"的认可
-
