@@ -5,12 +5,12 @@
 <script>
     new Valine({
         el: '#vcomments' ,
-        appId: 'ShNr2XWkaxBkkTGFNm8xs1kV-gzGzoHsz',
-        appKey: 'dsmuroUSX4cxbULTBqBzQJWS',
+        appId: 'xiXnUFTTVsjwOj3RMdrgLY5w-gzGzoHsz',
+        appKey: 'jYgD3fF22rW5RS15dBywkiOs',
         notify: false, 
         verify: false, 
         avatar: 'mm', 
         visitor: true,
-        placeholder: 'go go go'
+        placeholder: '评论区'
     });
 </script>
