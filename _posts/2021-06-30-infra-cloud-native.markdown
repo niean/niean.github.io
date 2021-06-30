@@ -23,5 +23,5 @@ CNCF对云原生的最新定义，为，
 - 云原生架构和开发理念，基于云原生产品和技术来构建、实现
 - 云原生应用，基于云原生架构和开发理念构建、实现
 
-云原生几个关键因素的关系，如下图，
+云原生这几个部分的关系，大体如下图，
 ![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cloud-native-zone.png)
