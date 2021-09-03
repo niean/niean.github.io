@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 基础设施之架构思考(持续更新)
+title: 运维建设之架构思考
 date: 2021-05-18 22:30
 tags:
   - thoughts
