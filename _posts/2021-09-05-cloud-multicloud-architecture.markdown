@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 基于云原生的多云架构
+title: 云原生之多云架构
 date: 2021-09-05 22:00
 tags:
   - thoughts

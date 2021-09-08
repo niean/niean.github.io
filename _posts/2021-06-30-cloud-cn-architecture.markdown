@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 云原生架构沉淀和思考
+title: 云原生之架构思考
 date: 2021-06-30 08:30
 tags:
   - thoughts
