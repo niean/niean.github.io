@@ -69,14 +69,28 @@ ACNA中将无服务（ServerLess）定义为关键指标，从当前的形势看
 
 ## 云原生架构的模式
 - 声明式设计模式
-    - 声明式，面向目标，用户做整体定义，服务端负责实现定义约定的内容、将复杂的中间过程黑盒化。如，IaC、K8S Yaml
+    - 声明式，面向目标，用户做目标定义，服务端(执行引擎)负责实现定义约定的内容、将复杂的中间过程黑盒化。如，IaC、K8S Yaml
     - 命令式，面向过程，用户做过程定义，根据服务端的执行情况、编排和调度各个过程。如，经典CD、工单
+    - 声明式代表了一种思维方式，即抽象和封装系统的核心功能，让用户在一个更高的层面进行操作
+    - 声明式的核心是执行引擎，该引擎既要做到幂等性，又要实现复杂性抽象(本质是知识沉淀)
+
+命令式和声明式的边界对比，如下：
+
+![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cn-iac.png)
 
 
 ## 云原生架构的理念
 - 开放应用标准OAM
     - 以应用为中心，而不是以工作负载为中心
     - 关注点分离。对外呈现「业务组件定义」和「运维特征定义」两个视图，OAM负责将两个视图整合为「应用配置」，并最终转化为「K8S可理解的编排调度声明」
+- DevOps理念和技术
+    - DevOps目标是缩短从开发到部署的周期，通过打破开发、测试、运维之间的壁垒，实现持续交付(Continuous Delivery)
+    - DevOps落地依赖组织文化(Culture)、自动化(Automation)，同时也要关注结果度量(Measurement)、知识分享(Sharing)，所谓的CAMS四原则。CICD等自动化技术只是其中一个环节，并非全部
+    - 云原生吸纳和演进了DevOps理念，云原生技术促进了DevOps的结果达成
+    - ![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cn-devops.png)
+    - ![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cn-devops-2.png)
+
+备注：DevOps相关图片引用自鲜枣课堂的[《DevOps到底是什么意思》](https://mp.weixin.qq.com/s/UEcESUMunURa1p-iBrJ4cA)一文。
 
 
 ## 云原生对不同岗位的影响
