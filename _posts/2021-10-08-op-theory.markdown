@@ -9,6 +9,25 @@ tags:
 ## 导读
 本文主要介绍运维建设依赖的理论基础，并结合工作实际给出了一些分析。
 
+## DevOps理念
+DevOps这个词来源于2009年在比利时根特市举办的首届DevOpsDays大会，为了在Twitter上更方便的传播，由DevOpsDays缩写为DevOps。
+
+DevOps是一组过程、方法与系统的统称，用于促进开发、技术运营和质量保障（QA）部门之间的沟通、协作与整合。它的目标是缩短从开发到部署的周期，通过打破开发、测试、运维之间的壁垒，实现持续交付(Continuous Delivery)。
+
+DevOps落地依赖组织文化(Culture)、自动化(Automation)，同时也要关注结果度量(Measurement)、知识分享(Sharing)，所谓的CAMS四原则。CICD等自动化技术只是其中一个环节，并非全部。
+
+效果方面，相比于软件开发的瀑布模式、敏捷开发，DevOps将开发、测试、部署三个环节打通，做到了快速迭代、持续反馈；其价值，不再限于开发阶段、而是贯穿了软件全生命周期。
+
+![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cn-devops.png)
+
+![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cn-devops-2.png)
+
+
+当前盛行的云原生概念，吸纳和演进了DevOps理念，云原生技术促进了DevOps的结果达成。
+
+本文主要内容，引用自鲜枣课堂的[《DevOps到底是什么意思》](https://mp.weixin.qq.com/s/UEcESUMunURa1p-iBrJ4cA)。
+
+
 ## 康威定律
 康威定律(Conway's Law)可以简述为: 「组织结构决定产品形态」，想要什么样的系统、就搭建什么样的团队，有什么样的团队、就尝试搭建什么样的系统。
 
