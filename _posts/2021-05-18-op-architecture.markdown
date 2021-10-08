@@ -24,6 +24,17 @@ K8S不等于云原生。符合标准的公有云、私有云、混合云方案�
 职能转移，主要动力在于：K8S体系吸收、囊括了Devops建设思想，使得Devops单独存在的必要性降低。
 
 ## 技术
+#### 2021.09.30 康威定律
+康威定律(Conway’s Law)是马尔文·康威1967提出的：「设计系统的架构受制于产生这些设计的组织的沟通结构」。通俗的来讲：有什么样的组织结构、就有什么样的产品架构。康威定律可以细分为四条规律：
+
+- 第一定律，组织沟通方式会通过系统设计表达出来。Communication dictates design。
+- 第二定律，时间再多一件事情也不可能做的完美，但总有时间做完一件事情。There is never enough time to do something right, but there is always enough time to do it over。
+- 第三定律，线型系统和线型组织架构间有潜在的异质同态特性。There is a homomorphism from the linear graph of a system to the linear graph of its design organization。
+- 第四定律，大的系统组织总是比小系统更倾向于分解。The structures of large systems tend to disintegrate during development, qualitatively more so than with small systems。
+
+原文，来自恶心的360文档库[这里](http://www.360doc.com/content/20/0706/07/68627098_922518179.shtml)。
+
+
 #### 2021.08.24 架构师的价值
 对于绝大多数的架构师来说，他的价值不在于创新了什么，而在于为公司选择一条稳妥的、合适的路。
 
