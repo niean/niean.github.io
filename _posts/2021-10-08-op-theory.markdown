@@ -28,6 +28,20 @@ DevOps落地依赖组织文化(Culture)、自动化(Automation)，同时也要�
 本文主要内容，引用自鲜枣课堂的[《DevOps到底是什么意思》](https://mp.weixin.qq.com/s/UEcESUMunURa1p-iBrJ4cA)。
 
 
+## 云服务模型
+通常有三种云服务模型：SaaS（软件即服务），PaaS（平台即服务）和IaaS（基础架构即服务）。
+
+![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210630/cloud-models.jpg)
+
+SaaS代表了云市场中企业最常用的选项。SaaS利用互联网向其用户提供应用程序，这些应用程序由第三方供应商管理。大多数SaaS应用程序直接通过Web浏览器运行，不需要在客户端进行任何下载或安装。由于其网络传输模式，SaaS无需在每台计算机上下载和安装应用程序，而在每台计算机上下载和安装应用程序正是IT员工的噩梦。通过SaaS，供应商可以管理所有潜在的技术问题，例如数据、中间件，服务器和存储，因此企业可以简化其维护和支持。典型的SaaS包括Google Apps、Dropbox、Salesforce、Cisco WebEx、Concur和GoToMeeting等。
+
+PaaS为某些软件提供云组件，这些组件主要用于应用程序。PaaS为开发人员提供了一个框架，使他们可以基于它创建自定义应用程序。所有服务器，存储和网络都可以由企业或第三方提供商进行管理，而开发人员可以负责应用程序的管理。PaaS的交付模式类似于SaaS，除了通过互联网提供软件，PaaS提供了一个软件创建平台。该平台通过Web提供，使开发人员可以自由地专注于创建软件，同时不必担心操作系统、软件更新，存储或基础架构。PaaS允许企业使用特殊的软件组件设计和创建内置于PaaS中的应用程序。由于具有某些云特性，这些应用程序或中间件具有可扩展性和高可用性。典型的PaaS包括AWS Elastic Beanstalk、Windows Azure、Heroku、Force.com、Google App Engine，Apache Stratos，OpenShift。
+
+IaaS由高度可扩展和自动化的计算资源组成。IaaS是完全自助服务，用于访问和监控计算、网络，存储和其他服务等内容，它允许企业按需求和需要购买资源，而不必购买全部硬件。IaaS通过虚拟化技术为组织提供云计算基础架构，包括服务器、网络，操作系统和存储等。这些云服务器通常通过仪表盘或API提供给客户端，IaaS客户端可以完全控制整个基础架构。 IaaS提供与传统数据中心相同的技术和功能，而无需对其进行物理上的维护或管理。IaaS客户端仍然可以直接访问其服务器和存储，但它们都通过云中的“虚拟数据中心”。与SaaS或PaaS相反，IaaS客户端负责管理应用程序、运行时、操作系统，中间件和数据等方面。但是，IaaS的提供商管理服务器、硬盘驱动器、网络，虚拟化和存储。一些提供商甚至在虚拟化层之外提供更多服务，例如数据库或消息队列。典型的IaaS包括DigitalOcean，Linode，Rackspace，AWS，Cisco Metapod，Microsoft Azure，Google Compute Engine（GCE）等。
+
+本文主要内容，引用自[《一张图看懂IaaS、PaaS和SaaS的区别》](https://blog.csdn.net/liujg79/article/details/84453736)。
+
+
 ## 康威定律
 康威定律(Conway's Law)可以简述为: 「组织结构决定产品形态」，想要什么样的系统、就搭建什么样的团队，有什么样的团队、就尝试搭建什么样的系统。
 
