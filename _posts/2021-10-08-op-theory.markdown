@@ -9,7 +9,7 @@ tags:
 ## 导读
 本文主要介绍运维建设依赖的理论基础，并结合工作实际给出了一些分析。
 
-## DevOps理念
+## DevOps
 DevOps这个词来源于2009年在比利时根特市举办的首届DevOpsDays大会，为了在Twitter上更方便的传播，由DevOpsDays缩写为DevOps。
 
 DevOps是一组过程、方法与系统的统称，用于促进开发、技术运营和质量保障（QA）部门之间的沟通、协作与整合。它的目标是缩短从开发到部署的周期，通过打破开发、测试、运维之间的壁垒，实现持续交付(Continuous Delivery)。
@@ -26,6 +26,18 @@ DevOps落地依赖组织文化(Culture)、自动化(Automation)，同时也要�
 当前盛行的云原生概念，吸纳和演进了DevOps理念，云原生技术促进了DevOps的结果达成。
 
 本文主要内容，引用自鲜枣课堂的[《DevOps到底是什么意思》](https://mp.weixin.qq.com/s/UEcESUMunURa1p-iBrJ4cA)。
+
+
+## GitOps
+GitOps最早由Weaveworks公司在2017年提出，是IaC在K8S生态下的一种实现，也是对DevOps理念的一次实践落地。GitOps具备声明式基础设施、版本化、自动化等特征，做到了配置变更可审计、可重复、一致性，完全符合IaC定义。同时GitOps又超出了常规的IaC能力，因为它使用Git做代码管理，并最大限度的复用了Git的工具生态。一个典型的GitOps实现如下图，
+
+![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20211008/gitops-cd.png)
+
+GitOps代码分为应用仓库、环境仓库两部分。应用仓库保存应用源码、应用部署描述等信息，对应上图中的Image Registry。环境仓库则描述了某部署环境(如生产环境、测试环境)的构成，包括应用列表、基础服务列表、对应的配置和版本等，对应上图中的Environment Repository。
+
+GitOps操作定义了一个完全自动化的控制器Operator，该控制器负责观察、对比真实部署环境的状态(基线是环境仓库的描述)，并确保两者达成一致。
+
+参考文献：[GitOps](https://www.gitops.tech/)
 
 
 ## 云服务模型
