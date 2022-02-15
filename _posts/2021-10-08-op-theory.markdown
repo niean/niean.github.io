@@ -33,6 +33,8 @@ GitOps最早由Weaveworks公司在2017年提出，是IaC在K8S生态下的一种
 
 ![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20211008/gitops-cd.png)
 
+GitOps将应用的所有环境配置都通过Git进行管理，并通过自动化的流程进行交付和变更，这样就是GitOps的核心理念。具体的，
+
 GitOps代码分为应用仓库、环境仓库两部分。应用仓库保存应用源码、应用部署描述等信息，对应上图中的Image Registry。环境仓库则描述了某部署环境(如生产环境、测试环境)的构成，包括应用列表、基础服务列表、对应的配置和版本等，对应上图中的Environment Repository。
 
 GitOps操作定义了一个完全自动化的控制器Operator，该控制器负责观察、对比真实部署环境的状态(基线是环境仓库的描述)，并确保两者达成一致。

@@ -221,6 +221,25 @@ Dev同学可能对分阶段认识有误区，可能会站在技术或代码开�
 
 ----
 ## 管理
+#### 2022.02.15 管理工具之RACI矩阵
+RACI矩阵的中文名字叫责任分配矩阵。在项目管理活动中，RACI矩阵在项目初期可以协助规划、澄清成员的权利与责任，也可以在项目中、后期作为撕逼依据(呃...)。
+
+RACI定义如下，
+
+- R(Responsible)执行人: 干活的
+- A(Accountable/Approve)负责人: 拍板的，定调的，出钱的
+- C(Consulted)顾问: 专家团
+- I(Informed)知情人: 邮件中被CC的达人
+
+RACI矩阵，有时又被称为RASCI矩阵、多了一个S，
+
+- S(Support)支持者：有钱出钱，有力出力
+
+粗粗的盘点一下，RASCI矩阵用的更多(即S角色大量存在)。借用FinOps的组织规划图、举个栗子：
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20200315/raci-egs.png)
+
+
 #### 2022.01.29 招人标准的反思
 分析了下自2019年建队以来、所有队员的在职情况，有如下几个关键信息：
 
