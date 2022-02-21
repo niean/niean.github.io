@@ -42,6 +42,10 @@ GitOps操作定义了一个完全自动化的控制器Operator，该控制器负
 参考文献：[GitOps](https://www.gitops.tech/)
 
 
+## FinOps
+FinOps基金会(F2)成立于2019年02月，于2022年06月并入Linux基金会(LF)。F2起源于Cloudability的客户顾问委员会会议(Cloudability’s quarterly Customer Advisory Board meeting)，在这个会上众多从业者呼吁成立一个独立于云厂商的社区、一起讨论云成本的最佳实践。Cloudability一家云服务成本管理平台。当前，F2的技术咨询委员会阵容并不是太强大。
+
+
 ## 云服务模型
 通常有三种云服务模型：SaaS（软件即服务），PaaS（平台即服务）和IaaS（基础架构即服务）。
 
