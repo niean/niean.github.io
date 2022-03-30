@@ -113,6 +113,7 @@ tags:
 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-cmdb.png)
 
 
+
 ## 总结
 多云管理本质是要做「公司内部的二级云服务提供商(CSP)」。它对外封装多云基础设施，对内提供云资源/云服务生命周期管理能力，同时兼顾使用习惯、而非简单的多云控制台纳管。云资产生命周期的运维终态，就是多云管理平台的建设目标。
 
