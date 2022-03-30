@@ -1,0 +1,119 @@
+---
+layout: post
+title: 多云资产管理平台
+date: 2022-03-30 22:00
+tags:
+  - tools
+---
+
+## 导读
+本文主要介绍了CH公司的多云资产管理平台，下文简称多云管理（Cloud Management Platform，缩写CMP）。
+
+多云管理，本质是要做「公司内部的二级云服务提供商(CSP)」，对外封装多云基础设施、对内提供云资源/云服务生命周期管理能力，同时兼顾使用习惯、而非简单的多云控制台纳管。本文更侧重云资源(IaaS)管理，PaaS、SaaS涉及较少。
+
+
+## 生命周期
+云资产IaaS通常分为计算、存储、网络三大类，另外还会有安全、数据库、大数据、AI、IAM、财务等服务。云资产生命周期分了准入、交付、运营(监管控析)、回收四个主要阶段，其中交付、运营相对高频。运维能力也分了 标准化(规范和流程)、平台化(ToM和ToC)、数智化(数字化&自动化&智能化)等发展阶段。云资产生命周期的各个阶段，期望达成的运维能力终态有所不同，如下表所示。这张表，定义了多云管理平台的最终目标。
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-objects.png)
+
+运维能力的阶段性定义，可以参考[本文](https://blog.niean.name/2020/01/01/op-roadmaps)。
+
+
+## 平台架构
+多云管理平台采用分层设计，引擎层抽象通用能力、打平多云异构，控制台兼容用户习惯、实现生命周期管理，如下图。
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-arch.png)
+
+下面，分层介绍。
+
+
+## 多云工厂
+多云工厂提供了统一的云资源控制面，解耦多云资源和上层的引擎层。如下图。
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-factory.png)
+
+对上层而言，云产品工厂终结了多云异构，统一了云产品对象模型、操作接口。对下层而言，云产品实例通过SDK、API、IaC等方式，实现了对云资源的操作控制。几种方式各有优劣，
+
+- SDK：质量最佳，多云适配是一个体力活儿
+- API：标准接口，依赖业界共识的协议标准，如Prometheus API
+- IaC：Provider质量参差不齐，IaC只用于交付，A>T>B
+- 其它：受限于云厂商开放平台的完善度，有些功能只能裸写API
+
+特别的，切换新云时只需要增加云产品实现，云资源控制方式升级也只需要调整引擎（当前正在发生从SDK到IaC的演进）。
+
+
+## 流程引擎
+当前，我们尚未感受到强烈的工作流需求，所以流程引擎退化成了工单引擎。如下图
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-gongdan.png)
+
+工单引擎的设计要点，有
+
+- UI组件可复用。工单提交、审批、详情等环节均抽象为可复用的Vue组件，支持同一页面路由到多入口，避免了不同服务重复造轮子
+- 统一引擎规范。除统一抽象了多级审批流、任务管理器外，对下层的服务后端提供统一规范的API，后端服务适配工单引擎、不直接暴露到UI
+
+
+## 监控采集
+对于云产品，甲方用户只能自建功能监控，产品本身的资源/应用监控则需要依赖云厂商。为了实现统一云服务监控，我方选择从云上同步监控数据。为了降低工厂的实现成本，我方使用云托管的Prometheus服务收集云产品监控数据，然后通过Telegraf收集Prometheus数据、转存到我方自建的VM集群，如下图
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-observation.png)
+
+利用Prometheus事实标准协议/接口，使用Telegraf实现多云数据采集的归一化，极大简化了我方的研发成本。这件事能做成，依赖：
+
+- 云厂商提供Prometheus托管服务，对外暴露标准Prometheus HTTP API
+- 云监控支持将指定云产品的监控数据、吐给托管Prometheus
+
+上述依赖，并非所有公有云厂商都已具备，也需要甲方Push他们来做。
+
+
+## CMDB
+广义CMDB，在微服务架构体系中承担了生命周期管理的职责；狭义CMDB，则专注于元数据管理。站在我司角度，CMDB建设相对滞后，各类PaaS、SaaS基本都有专门的平台来支撑、其元数据管理已经落地(烟囱式的场景平台)，很难要求推翻现有平台、统一接入CMDB管理生命周期。所以，我司CMDB从开始就定位于狭义的元数据管理，而且优先覆盖云资产相关的元数据，如下图。
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-cmdb1.png)
+
+上图，涉及到三个设计原则：
+
+- 职能边界: CMDB只负责元数据，生命周期管理交给烟囱式场景平台去做
+- 数据边界: 谁生产、谁管理，烟囱式场景平台负责管理自己生成的元数据；CMDB优先考虑云资产，对于其他方面只做必要的聚合、查漏补缺；对外通过流量网关实现统一CMDB的效果
+- 数据质量: 谁生产、谁负责，数据生产方是数据的权威、也是数据质量的负责人，烟囱式场景平台在数据质量方面会分担很多责任
+
+
+对于CMDB本身功能，我们倾向于做减法，简化功能、简化模型。如下图。这里，涉及到一个设计原则：
+
+- 功能边界: CMDB重点放在模型、数据，做轻状态流转、避免涉及场景，模型要素有对象、属性、对象关联
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-cmdb2.png)
+
+业界有太多的CMDB做的又大又肥，最后因为定位不清晰、运营成本过高被抛弃，教训历历在目。更多详情，可以参考本文：<a href="https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/CMDB-概要设计.doc" target="_blank">CMDB概要设计.doc</a>
+
+
+## 业务层
+简单贴一下，多云管理的运维管理面(ToM)、用户控制台(ToC)。一般的，通过工单的方式，将运维管理面ToC化。
+
+##### 机器管理(ToC)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-server.png)
+
+##### 域名管理(ToM)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-domain.png)
+
+##### 地址管理(ToM)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-ips.png)
+
+##### 安全组(ToC)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-sg.png)
+
+##### CDN(ToC)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-cdn.png)
+
+##### 工单中心(ToC)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-gongdan.png)
+
+##### CMDB(ToM)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-biz-cmdb.png)
+
+
+## 总结
+多云管理本质是要做「公司内部的二级云服务提供商(CSP)」。它对外封装多云基础设施，对内提供云资源/云服务生命周期管理能力，同时兼顾使用习惯、而非简单的多云控制台纳管。云资产生命周期的运维终态，就是多云管理平台的建设目标。
+
+多云管理需要分层设计。引擎层抽象通用能力、打平多云异构、做到随时可以替换升级，控制台兼容用户习惯、实现生命周期管理。
