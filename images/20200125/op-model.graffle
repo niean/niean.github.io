@@ -117,7 +117,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2021-09-23 06:09:11 +0000</string>
+	<string>2022-04-03 07:46:51 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -144,6 +144,11 @@
 		<array>
 			<string>float</string>
 			<string>18</string>
+		</array>
+		<key>NSPaperName</key>
+		<array>
+			<string>string</string>
+			<string>A4</string>
 		</array>
 		<key>NSPaperSize</key>
 		<array>
@@ -256,7 +261,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{172.69947770336492, 310.39369204058426}, {279, 14}}</string>
+					<string>{{176.065616812293, 327.96849469493696}, {279, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -323,52 +328,6 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{176.065616812293, 102.51965287704762}, {289.13386089107189, 198.42519865073552}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>ID</key>
-					<integer>30</integer>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<real>0.66423153879999997</real>
-								<key>g</key>
-								<real>0.66424006219999998</real>
-								<key>r</key>
-								<real>0.66422420739999999</real>
-								<key>space</key>
-								<string>srgb</string>
-							</dict>
-							<key>CornerRadius</key>
-							<real>5</real>
-							<key>Pattern</key>
-							<integer>1</integer>
-							<key>Width</key>
-							<real>0.5</real>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>TextAlongPathGlyphAnchor</key>
-						<string>center</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
 					<string>{{286.29921519606137, 176.06558617153112}, {68.666664123535156, 28.666666030883789}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
@@ -396,7 +355,7 @@
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs18 \cf0 \'d4\'c6\'d4\'ad\'c9\'fa}</string>
+\f0\fs18 \cf0 \'bf\'f2\'bc\'dc}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -471,7 +430,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{84.036762657316586, 124.89888827203018}, {54.000000000000007, 14}}</string>
+					<string>{{84.036762657316586, 124.89888827203018}, {54.000000000000014, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -540,7 +499,7 @@
 {\*\expandedcolortbl;;\cssrgb\c66422\c66424\c66423;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\fs18 \cf2 \'d2\'b5\'ce\'f1\'c2\'df\'bc\'ad\'b4\'fa\'c2\'eb}</string>
+\f0\fs18 \cf2 \'d2\'b5\'ce\'f1\'d3\'a6\'d3\'c3\'b7\'fe\'ce\'f1}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 						<key>VerticalPad</key>
@@ -906,7 +865,7 @@
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs18 \cf0 \'d2\'b5\'ce\'f1\'b4\'fa\'c2\'eb}</string>
+\f0\fs18 \cf0 \'d3\'a6\'d3\'c3\'b7\'fe\'ce\'f1}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -974,7 +933,53 @@
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs18 \cf0 OS}</string>
+\f0\fs18 \cf0 \'cf\'b5\'cd\'b3}</string>
+						<key>TextAlongPathGlyphAnchor</key>
+						<string>center</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{176.065616812293, 102.51965287704762}, {289.13386089107189, 198.42519865073552}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>30</integer>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<real>0.66423153879999997</real>
+								<key>g</key>
+								<real>0.66424006219999998</real>
+								<key>r</key>
+								<real>0.66422420739999999</real>
+								<key>space</key>
+								<string>srgb</string>
+							</dict>
+							<key>CornerRadius</key>
+							<real>5</real>
+							<key>Pattern</key>
+							<integer>1</integer>
+							<key>Width</key>
+							<real>0.5</real>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -1057,9 +1062,11 @@
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{40.833333333333258, 60.333333333333371}, {517.5, 333.5}}</string>
+		<string>{{47.5, 49.25}, {517.5, 333.5}}</string>
 		<key>WindowInfo_InspectorTab</key>
-		<array/>
+		<array>
+			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
+		</array>
 		<key>ZoomValues</key>
 		<array>
 			<array>
