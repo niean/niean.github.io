@@ -231,7 +231,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2022-03-31 01:43:07 +0000</string>
+	<string>2022-04-04 13:14:06 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -15334,7 +15334,7 @@ HRBP \'c0\'eb\'d6\'b0/\'d7\'aa\'b8\'da\'c1\'f7\'b3\'cc \'bb\'d8\'b5\'f7}</string
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>Frame</key>
 		<string>{{0, 0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -15346,7 +15346,7 @@ HRBP \'c0\'eb\'d6\'b0/\'d7\'aa\'b8\'da\'c1\'f7\'b3\'cc \'bb\'d8\'b5\'f7}</string
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{54.217935927280706, 35.617848477009879}, {834.67741935483878, 537.9032258064517}}</string>
+		<string>{{80.991735537190351, 179.33884297520666}, {855.37190082644588, 551.23966942148786}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
@@ -15385,7 +15385,7 @@ HRBP \'c0\'eb\'d6\'b0/\'d7\'aa\'b8\'da\'c1\'f7\'b3\'cc \'bb\'d8\'b5\'f7}</string
 			</array>
 			<array>
 				<string>业务层</string>
-				<real>4</real>
+				<real>4.46</real>
 				<real>1</real>
 			</array>
 			<array>
