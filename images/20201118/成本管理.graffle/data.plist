@@ -18082,7 +18082,7 @@ eg. CPU/GPU}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {892.241379310345, 575}}</string>
+		<string>{{8.6206896551725158, 0}, {892.24137931034443, 575}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
