@@ -305,7 +305,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2022-06-14 07:57:36 +0000</string>
+	<string>2022-08-08 06:45:32 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -2174,7 +2174,7 @@
 							<string>0</string>
 						</dict>
 						<key>Size</key>
-						<real>9</real>
+						<real>7</real>
 					</dict>
 					<key>ID</key>
 					<integer>14</integer>
@@ -2202,7 +2202,8 @@
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs18 \cf0 CTO}</string>
+\f0\fs14 \cf0 \'b3\'c9\'b1\'be\'ce\'af\'d4\'b1\'bb\'e1\
+\'d2\'b5\'ce\'f1\'cd\'c5\'b6\'d3}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -18070,7 +18071,7 @@ eg. CPU/GPU}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>10</integer>
+		<integer>0</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -18082,7 +18083,7 @@ eg. CPU/GPU}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{8.6206896551725158, 0}, {892.24137931034443, 575}}</string>
+		<string>{{58.571428571428548, 47.30158730158734}, {328.57142857142861, 211.74603174603175}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
