@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 云原生之运营平台
+title: 云原生之运营平台(未完待续)
 date: 2021-09-10 22:00
 tags:
-  - thoughts
+  - tools
 ---
 
 ## 导读

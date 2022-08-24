@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 云原生之架构思考
+title: 云原生之架构基础
 date: 2021-06-30 08:30
 tags:
-  - thoughts
+  - arch
 ---
 
 ## 导读

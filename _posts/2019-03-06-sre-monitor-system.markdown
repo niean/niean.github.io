@@ -3,7 +3,7 @@ layout: post
 title: 监控定位体系建设思路
 date: 2019-03-06 11:10
 tags:
-  - thoughts
+  - model
 ---
 
 ## 导读

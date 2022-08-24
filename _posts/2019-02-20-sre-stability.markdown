@@ -3,7 +3,7 @@ layout: post
 title: 业务稳定性建设套路
 date: 2019-02-20 12:00
 tags:
-  - thoughts
+  - model
 ---
 
 ## 导读

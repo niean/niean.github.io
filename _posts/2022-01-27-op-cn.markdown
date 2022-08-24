@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 云原生时代的运维转型
+title: 运维建设之云原生转型
 date: 2022-01-27 20:00
 tags:
-  - theory
+  - model
 ---
 
 ## 要点简述

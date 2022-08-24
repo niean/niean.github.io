@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 运维建设之工作规划
+title: 运维管理之工作规划
 date: 2020-12-24 22:30
 tags:
-  - thoughts
+  - mgt
 ---
 
 ## 导读
