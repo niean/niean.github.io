@@ -12886,7 +12886,7 @@ Pool}</string>
 \f0\fs16 \cf2 \'d4\'ad\'d4\'f2\'a3\'ba\'b2\'bf\'c3\'c5\'c4\'da\'c8\'a8\'cf\'de\'b1\'d5\'bb\'b7\'a3\'acGit Repo\'b5\'c4\'b9\'dc\'c0\'ed\'c8\'a8\'cf\'de\'a1\'a2\'d6\'bb\'c4\'dc\'ca\'da\'d3\'e8Git\'cb\'f9\'ca\'f4\'b2\'bf\'c3\'c5\'b5\'c4RD\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf3 Git\'b6\'e0\'b9\'e9\'ca\'f4\'ce\'ca\'cc\'e2\'a3\'ba
-\f1 Git
+\f1 \cf3 Git
 \f2 \'b2\'bf\'ca\'f0\'c1\'cb\'b6\'e0\'d3\'e0\'b5\'c4
 \f1 ZNS
 \f2 \'bd\'da\'b5\'e3(
@@ -18520,7 +18520,7 @@ eg. CPU/GPU}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>6</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -18532,7 +18532,7 @@ eg. CPU/GPU}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{36.25954198473277, 45.038167938931402}, {790.07633587786256, 509.16030534351142}}</string>
+		<string>{{15.294117647058838, -0.58823529411766273}, {608.82352941176475, 399.99999999999994}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
