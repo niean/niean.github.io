@@ -6,5 +6,10 @@ tags:
   - cn
 ---
 
+## 基础服务
+绝大部分基础服务的治理，都可以采用如下技术模型（架构+分工）：
+
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220913/sfw-universals.png)
+
+
 ## 对象存储OS
-![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220913/sfw-os.png)
