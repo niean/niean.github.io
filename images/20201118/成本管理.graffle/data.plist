@@ -1709,7 +1709,7 @@
 
 \f0\fs18 \cf0 IDP\
 
-\fs8 \cf2 ICSP}</string>
+\fs8 \cf2 + ICSP}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -7170,7 +7170,7 @@ Binlog}</string>
 						<key>Info</key>
 						<integer>-1</integer>
 						<key>Position</key>
-						<real>0.49966884568220732</real>
+						<real>0.49966883659362793</real>
 					</dict>
 					<key>ID</key>
 					<integer>169</integer>
@@ -7182,20 +7182,20 @@ Binlog}</string>
 								<key>element</key>
 								<string>MOVETO</string>
 								<key>point</key>
-								<string>{241.0363927420367, 156.94754267898591}</string>
+								<string>{241.0363927420367, 156.94754121748741}</string>
 							</dict>
 							<dict>
 								<key>element</key>
 								<string>LINETO</string>
 								<key>point</key>
-								<string>{261.16171299900435, 156.86897391354165}</string>
+								<string>{261.16171299737914, 156.86897253668056}</string>
 							</dict>
 						</array>
 					</dict>
 					<key>Points</key>
 					<array>
-						<string>{241.0363927420367, 156.94754267898591}</string>
-						<string>{261.16171299900435, 156.86897391354165}</string>
+						<string>{241.0363927420367, 156.94754121748741}</string>
+						<string>{261.16171299737914, 156.86897253668056}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -7235,7 +7235,7 @@ Binlog}</string>
 						<key>Info</key>
 						<integer>-1</integer>
 						<key>Position</key>
-						<real>0.50099028080144603</real>
+						<real>0.50099027156829834</real>
 					</dict>
 				</dict>
 				<dict>
@@ -19237,7 +19237,7 @@ eg. CPU/GPU}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>6</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -19249,7 +19249,7 @@ eg. CPU/GPU}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {932.43243243243251, 612.61261261261268}}</string>
+		<string>{{24.25, 15}, {517.5, 340}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
