@@ -58,7 +58,8 @@ tags:
 #### 预算提报流程
 预算提报和更新流程，是重度运营过程。一个参考样例，如下：
 
->> TODO: 补充预算流程图
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-liucheng.png)
+
 
 #### 预算预估模型
 为简化云资产的预算预估，我们采取了简化计费项、统一定价、固化预估模型。具体如下，
