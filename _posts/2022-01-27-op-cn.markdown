@@ -6,6 +6,8 @@ tags:
   - model
 ---
 
+云原生时代到来后，运维势必面临着转型的机遇和挑战。以下，是CH运维团队的转型思考和实践。
+
 
 ## 要点简述
 - 传统运维，职责是将工业制成品组装成服务、交付给用户，并维持服务运转；特点是强依附于业务
@@ -36,7 +38,7 @@ tags:
 ## 传统运维
 在传统的运维模式中，服务对象基本可以划分为三层。最底层是硬件基础设施IaaS，主要是计算、网络、存储构成；中间层是软件基础设施，包括了操作系统、虚拟化技术、代码框架、中间件等；最上层是业务层，主要是应用服务。
 
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20200125/op-model.png)
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/op-model.png)
 
 传统运维的职责是，通过一系列的流程、技术、方法，**将工业制成品组装成服务、交付给用户，并维持服务运转**；通常要求达成稳定、成本、安全、效率等多个维度的目标(运营性)。从某种程度上来讲，传统运维需要**依附于业务才能产生价值**；很多公司，会把是否理解业务、作为运维工作者的主要考核之一(依附性)。
 
@@ -82,7 +84,7 @@ tags:
 
 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-wentai.png)
 
-备注：本文中的服务框架，既包括N年前的代码框架、代码库，也包括当前流行的微服务服务治理，过渡阶段、起名捉急。
+备注：本文中的服务框架，既包括N年前的代码框架、代码库，也包括当前流行的微服务治理，过渡阶段、起名捉急。
 
 
 ## 转型实践
