@@ -8,7 +8,7 @@ tags:
 ---
 
 ## 导读
-本文主要介绍CH的云成本管理平台(CCMP，Cloud Cost Management Platform)，要点包括：平台架构、计量计费、厂商对账、成本管控等。
+本文主要介绍CH的云成本管理平台(CCMP，Cloud Cost Management Platform)，要点包括：平台架构、计量计费、厂商对账、成本管控等。中间夹杂了必要的场景介绍。
 
 云资源中的资源，主要指IT资源，下文中的资源、IT资源、云产品指的都是云资源。云成本管理平台，下文简称成本管理平台。
 
@@ -61,13 +61,13 @@ tags:
 - 业务：商业视角的业务单元、利润中心，基本对应了公司对外提供的产品服务，用于高管、财务等角色
 - 主体：主体对应了企业法人，主要解决财税法等政策问题，用于CEO、法务、财务等角色
 
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-fentan.png)
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-fentan-moxing.png)
 
 在实际操作中，预单是整个分摊模型的核心(技术视角)，资源只有具备了预单归属、才能做进一步预算和分摊。预单之上还会有部门、用做技术视角的聚合展示，业务之上还会有业务群、用做财务/高管视角的聚合展示，部门、业务群只是特定的视图聚合不是建模核心。
 
 按照上述分摊模型，整理出一个典型的分摊账单、如下图(集群维度太细被聚合掉了)。对于计费项复杂、尚未提炼出用量的资源，使用费用作为用量(对应单价为1)，如其它科目下的专线、安全产品、技术服务费等。
 
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-zhangdan.png)
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-fentan-zhangdan.png)
 
 
 #### 预算
