@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FinOps成本管理体系
+title: FinOps成本管理体系(未完待续)
 date: 2023-01-30 19:00
 tags:
   - finops
@@ -12,35 +12,50 @@ tags:
 CH是公司名称，下文简称我司。FinOps成本管理体系，后文简称FinOps。
 
 
-## 文化基因
-我司的商业，是跟随战略。公司通过模仿商业模式、快速入局，再通过做高运营效率、长跑胜出，运营效率生死攸关。
-
-文化制度上，崇尚节俭。创始团队言传身教、制度设计保驾护航，节俭被体现在价值观、组织建设、目标制定等多方面。文化为商业战略服务。
-
-在这样的商业目标、文化制度背景下，IT资源做为常年Top3的支出项、格外受重视，这是滋生FinOps成本管理体系的土壤。
-
-
 ## 业务场景
-FinOps的业务场景(目标)，主要有如下几个：
+FinOps的业务场景就是节约IT资源成本，在公有云原生的环境下、主要表现为两个目标：
 
-- 厂商对账：以止损为目标，对照合同、发现厂商的不合理费用，追溯并挽回损失
-- 成本管控：以预算为目标，管控内部业务的资源成本，超预算时禁止新增或提升审批等级
-- 成本优化：常态运营、手段多样，用更少的资源投入、支撑更多的业务，持续做高ROI
+- 成本管控：以预算为目标，通过商务技术等手段、不断降低存量资源成本，同时管理好资源增量、做到预算不超
+- 厂商对账：以止损为目标，对照合同、发现厂商的不合理收费，追溯并挽回损失
+
+
+## 商业环境
+FinOps业务场景具备相当的弹性，IT资源成本做坏了不会立刻致命，因此只有那些长期经营、效益生死攸关的公司才可能真正投入。
+
+采用跟随战略的公司，通过模仿商业模式、快速入局，再通过做高运营效率、长跑胜出，运营效率生死攸关；文化制度上崇尚节俭，创始团队言传身教、制度设计保驾护航，节俭被体现在价值观、组织建设、目标制定等多方面。在这样的商业战略、文化制度下，IT资源做为常年Top3的支出项、格外受重视，FinOps成长得到了有效保障。
+
+技术或商业创新型公司，主业利润率非常丰厚，相比而言IT资源成本可能无关紧要，在这样的环境下FinOps大多流于形式；但这些公司一旦进入稳态，也会开始重视经营效率，FinOps也会有的搞。
 
 
 ## 组织结构
+FinOps组织结构，如下图。FinOps组织结构，由FinOps、ICSP(内部云平台)、研发、财务、成本委员会等角色组成，承担厂商对账(蓝色)、成本管控(橙色)职能。
+
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/finops-zuzhi.png)
 
+- 厂商对账(蓝色)：ICSP内部云平台，从多云厂商采购资源、交付给研发使用，ICSP会对资源二次定价、把原价和二次定价的计费结果给到FinOps；FinOps使用ICSP的原价计费、跟多云厂商对账，防止被多收费
+- 成本管控(橙色)：研发提报IT资源预算、给到FinOps，FinOps将天级分摊给到ICSP、超预算则交付审批升级，FinOps将月级分摊给到财务、经由成本委员会审计预算、对研发形成更全面的管控(通常要求成本优化)
+- 
 
-## 平台建设
+
+
+## 业务模型
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-arch.png)
-
-
-## 运营事项
 
 
 ## 成本优化
 成本优化属于运营，因事项多、价值大单拆出来讲。
+
+
+
+----
+以下是FinOps常见的运营事项。
+
+## 预算制定
+#### 预算要点
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoyaodian.png)
+
+#### 提报流程
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoliucheng.png)
 
 
 
@@ -53,17 +68,7 @@ FinOps的业务场景(目标)，主要有如下几个：
 
 
 ----
-以下是文末附加内容，待整理。
-
-
-## 预算提报
-#### 提报流程
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoliucheng.png)
-
-#### 预算要点
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoyaodian.png)
-
-
+以下是文末附加内容，待整理、完善。
 
 ## 成本优化
 成本优化，学名资源效能，遵循解决问题的工程范式: 发现问题 -> 分析问题 -> 抽象模型 -> 度量指标 -> 建设目标 -> 关键路径 -> 组织保障，如下图。
@@ -96,3 +101,4 @@ FinOps的业务场景(目标)，主要有如下几个：
 - 既要整存量、又要控增量，整存量要沉淀为运营能力、控增量要沉淀为平台能力
 
 大部分成员会把成本优化当做政治任务，只追求做到预算达标，一些措施会被刻意保留下来、应对将来更繁重的优化目标。这种做法，对公司显然是不利的，这其中既有打工人聪明的狡黠、也有老板激励手段的不到位。
+
