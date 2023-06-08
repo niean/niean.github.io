@@ -309,7 +309,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2023-04-17 06:21:00 +0000</string>
+	<string>2023-05-16 11:59:43 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -16473,6 +16473,7 @@ Binlog}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs12 \cf2 CD\'b7\'a2\'b2\'bc\'ca\'b1\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 \cf3 RD\'c8\'cb\'b9\'a4\'d1\'a1\'d4\'f1\'b4\'fa\'c2\'eb\'b0\'e6\'b1\'be}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
@@ -19311,7 +19312,7 @@ Binlog}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>12</integer>
+		<integer>5</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -19323,7 +19324,7 @@ Binlog}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{34.87534039828585, 125.56744881301979}, {514.92537313432842, 338.30845771144271}}</string>
+		<string>{{37.448147878611159, -7.4218033622006185}, {568.68131868131877, 373.62637362637355}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
@@ -19357,7 +19358,7 @@ Binlog}</string>
 			</array>
 			<array>
 				<string>分摊模型</string>
-				<real>1.51</real>
+				<real>1.8199999999999998</real>
 				<real>1</real>
 			</array>
 			<array>
