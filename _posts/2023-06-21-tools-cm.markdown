@@ -1,5 +1,5 @@
 ---
-layout: postpre
+layout: post
 title: 变更管控平台
 date: 2023-06-21 19:00
 tags:
