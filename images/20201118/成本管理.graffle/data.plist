@@ -285,7 +285,7 @@
 	<key>GuidesVisible</key>
 	<string>YES</string>
 	<key>ImageCounter</key>
-	<integer>13</integer>
+	<integer>16</integer>
 	<key>ImageLinkBack</key>
 	<array>
 		<dict/>
@@ -296,9 +296,9 @@
 	</array>
 	<key>ImageList</key>
 	<array>
+		<string>image14.png</string>
 		<string>image12.png</string>
 		<string>image11.png</string>
-		<string>image10.png</string>
 		<string>image8.png</string>
 		<string>image6.png</string>
 	</array>
@@ -309,7 +309,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2023-05-16 11:59:43 +0000</string>
+	<string>2023-06-19 06:43:28 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -4154,13 +4154,75 @@ eg. CPU/GPU}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{39.685039730147111, 97.795276477862529}, {880.64435492776784, 192.75590726071442}}</string>
+					<string>{{36.85039403513656, 294.80315228109282}, {890.81200000000001, 44}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>space</key>
+							<string>gg22</string>
+							<key>w</key>
+							<string>0</string>
+						</dict>
+						<key>Size</key>
+						<real>10</real>
+					</dict>
+					<key>ID</key>
+					<integer>9</integer>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'cb\'b5\'c3\'f7\'a3\'ba\
+1\'a1\'a2\'d4\'c6\'b2\'fa\'c6\'b7\'bc\'c6\'b7\'d1\'c4\'a3\'d0\'cd\'a3\'ac\'d3\'c9\'c1\'f9\'b8\'f6\'d2\'aa\'cb\'d8\'a1\'a2\'c8\'fd\'b8\'f6\'ca\'fd\'be\'dd\'cf\'ee\'b9\'b9\'b3\'c9\'a1\'a3\'c1\'f9\'b8\'f6\'d2\'aa\'cb\'d8\'ca\'c7\'d5\'cb\'ba\'c5\'a1\'a2\'b2\'fa\'c6\'b7\'a1\'a2\'d7\'d3\'b2\'fa\'c6\'b7\'a1\'a2\'ca\'b5\'c0\'fd\'a1\'a2\'bc\'c6\'b7\'d1\'cf\'ee\'a1\'a2\'b5\'d8\'d3\'f2\'a3\'ac\'c8\'fd\'b8\'f6\'ca\'fd\'be\'dd\'cf\'ee\'ca\'c7\'b5\'a5\'bc\'db\'a1\'a2\'d3\'c3\'c1\'bf\'a1\'a2\'b7\'d1\'d3\'c3\'a1\'a3\'ca\'b5\'c0\'fd\'d2\'aa\'cb\'d8\'cd\'a8\'b3\'a3\'bb\'e1\'b1\'bb\'be\'db\'ba\'cf}</string>
+						<key>TextAlongPathGlyphAnchor</key>
+						<string>center</string>
+					</dict>
+					<key>TextPlacement</key>
+					<integer>0</integer>
+					<key>Wrap</key>
+					<string>NO</string>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{36.85039403513656, 103.46456786788366}, {747.63780205902094, 158.74015892058833}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
-					<integer>5</integer>
+					<integer>7</integer>
 					<key>ImageID</key>
-					<integer>10</integer>
+					<integer>14</integer>
 					<key>Scaling</key>
 					<integer>1</integer>
 					<key>Style</key>
@@ -19312,7 +19374,7 @@ Binlog}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>5</integer>
+		<integer>3</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
@@ -19324,7 +19386,7 @@ Binlog}</string>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{37.448147878611159, -7.4218033622006185}, {568.68131868131877, 373.62637362637355}}</string>
+		<string>{{-35.71794871794917, 25.666666666667144}, {884.61538461538464, 581.19658119658129}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
@@ -19348,7 +19410,7 @@ Binlog}</string>
 			</array>
 			<array>
 				<string>计费模型</string>
-				<real>1.5</real>
+				<real>1.1699999999999999</real>
 				<real>1</real>
 			</array>
 			<array>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postpre
 title: FinOps成本管理体系(未完待续)
 date: 2023-01-30 19:00
 tags:

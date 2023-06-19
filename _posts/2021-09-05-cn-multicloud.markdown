@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postpre
 title: 云原生之多云架构(未完待续)
 date: 2021-09-05 22:00
 tags:
