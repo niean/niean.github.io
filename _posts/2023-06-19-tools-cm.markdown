@@ -1,0 +1,35 @@
+---
+layout: post
+title: 变更管控平台
+date: 2023-06-19 21:00
+tags:
+  - tools
+---
+
+## 导读
+
+
+## 领域模型
+变更场景，典型步骤如下。所有变更，都来自一组确定的需求，等同于交付。执行的前后，是变更管控的领域范围。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-change.png)
+
+变更管控，领域模型如下。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-model.png)
+
+首先，请致敬滴滴运维部总结的五条军规，即：①提前通报要记得、②变更步骤要完备、③分级发布要遵守、④高峰窗口要避免、⑤服务检查要执行。对应到CM，通报无处不在，变更步骤的完备性对应工单审批，分级发布、高峰窗口对应执行审批，服务检查对应结果检查；规范检查则把管控扩展到了对象建模(如标准化)。
+
+
+## 系统设计
+变更管控，实体关系图ER如下。其中，审批流是核心。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-er.png)
+
+审批流，模块组成如下。其中，审批事件随封线规则等条件动态变化，审批人从权限、人管、资源等平台获取。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-wf-config.png)
+
+审批流，核心状态流转FSM如下。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-wf-fsm.png)
