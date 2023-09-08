@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 基础设施变更管控平台
+title: 基础设施之变更管控
 date: 2023-06-19 21:00
 tags:
   - tools
