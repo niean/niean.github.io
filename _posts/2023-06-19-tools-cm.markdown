@@ -63,6 +63,10 @@ tags:
 
 变更管控和度量审计是异步交互。CM将变更工单、管控流程的信息，以MQ消息的形式、异步给到事件中心，度量审计平台从事件中心订阅消息、完成挖掘。
 
+更详细的变更管控DDD模型，如下图。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-model-ddd.png)
+
 
 ## 一些要点
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230619/cm-else-kp.png)
