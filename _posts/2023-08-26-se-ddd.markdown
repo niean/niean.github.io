@@ -28,7 +28,7 @@ tags:
     - 职责：限界上下文用来明确聚合(或领域)的范围和职责，定义了该领域内部的通用语言、模型和规则
     - 原则：解决相同问题的聚合(或领域)应该被放到同一个限界上下文；如果⼀个聚合同时解决多个问题，则需要对聚合进⾏拆分，拆分后的聚合应该被划分到不同限界上下⽂中
     - 形式：子域和限界上下文实现时通常是1对1的关系，但也能多对多
-    - ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-model-boundedcontext.jpg.jpg)
+    - ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-model-boundedcontext.jpg)
 - 聚合：Aggregate，多个实体和值对象组成的业务规则叫聚合；聚合要封装业务的不变性，并明确边界、减少关联、做到高内聚低耦合，指导微服务实现
     - 过程：找出模型(领域事件、业务名词、事件合并)，内聚成聚合(角色、命令、事件)
     - 聚合根：聚合里面一定有一个实体是聚合根；聚合根作用是保证内部的实体的一致性，外部操作只需要对阵聚合根
