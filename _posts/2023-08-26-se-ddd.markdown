@@ -11,7 +11,8 @@ tags:
 - DDD核心思想是分治。将复杂的、大规模的业务领域建模，统一语言、划分边界，然后分而治之，期望边界清晰、内核稳固(高内聚低耦合)
 - DDD是动态演化过程。建模过程是不断猜想与反驳的过程，演化观点是建模过程的基本心智模式
 - DDD建模几个关键词：业务场景，边界划分、通用语言，领域对象，领域建模。经典六边形架构，如下图
-- ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-arch-liubianxing.png)
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-arch-liubianxing.png)
 
 
 ## 基本概念
@@ -87,13 +88,91 @@ DDD建模分为明确产品战略、梳理业务场景、划分技术领域、�
 
 
 ## 代码规范
-待补充。
+以Golang语言为例，实现一个 报警通知按照BU分发 的功能。四层结构如下，
+
+<details>
+<summary>DDD四层代码样例</summary>
+<pre><code class="language-golang">①用户接口层
+// pkg: httpcontroller
+func Routes(r *gin.Engine) {
+    a := BuAlarmApi{}
+    group := r.Group("/api/v1/bualarm")
+    group.POST("/alarm", a.BuAlarm)
+}
+func (this *BuAlarmApi) BuAlarm(c *gin.Context) {
+    bu := c.DefaultPostForm("bu", "")
+    content := c.DefaultPostForm("content", "")
+    username, err := this.GetUser(c)
+    alarmDTO := dto.AlarmDTO{
+        Budget_unit: bu,
+        Content:     content,
+        Sysname:     username,
+    }
+    err = BuAlarmApp.BuAlarm(alarmDTO)
+    ...
+    c.JSON(http.StatusOK, this.Success())
+}
+
+②应用层
+// pkg: application
+var BuAlarmApp = new(BuAlarmAppplication)
+func (this *BuAlarmAppplication) BuAlarm(alarmDTO dto.AlarmDTO) error {
+    alarmBO := bo.AlarmBO{
+        Budgetunit: alarmDTO.Budget_unit,
+        Title:       alarmDTO.Title,
+        Content:     alarmDTO.Content,
+    }
+    // Go依赖注入
+    domain := &domain.BuAlarm{BuChatRepo: repo.BuChatRepo, IMRepo: repoIm.IMRepo}
+    err = domain.AlarmByBu(&alarmBO)
+    ...
+    return nil
+}
+
+③领域层
+// pkg: domain
+// SPI: IM基础设施接口定义 IMRepo
+type IMRepo interface {
+    SendIM(im *do.IM) error
+}
+// DomainService: 领域服务 AlarmByBu
+type BuAlarm struct {
+    IMRepo     dependency.IMRepo     // IM基础设施
+}
+func (this *BuAlarm) AlarmByBu(alarmBO *bo.AlarmBO) (err error) {
+    bu := strings.TrimSpace(alarmBO.Budget_unit)
+    buChatDO, err := this.BuChatRepo.GetBuChat(bu)
+    ...
+    imDO := do.IM{
+        BU:      bu,
+        Tos:     buChatDO.ChatIds,
+        Content: alarmBO.Content,
+    }
+    err = this.IMRepo.SendIM(&imDO)
+    ...
+    return nil
+}
+
+④基础设施层
+// pkg: infrastructure
+var IMRepo = new(IMSender)
+// SP: IMSender实现IMRepo规定的SPI
+type IMSender struct {
+}
+func (this *IMSender) SendIM(im *do.IM) (err error) {
+    SendChat(im.Tos, im.Content, createTitle(im.Content, im.Title))
+    ...
+    return nil
+}
+
+</code></pre>
+</details>
 
 
 ## 设计理念
 - DDD架构：六边形架构，如下图
 - ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-arch-liubianxing.png)
-- 分层架构：模块代码实现分为四层，自上而下分别是接口层、应用层、领域层、基础层。如下图，
+- 分层架构：模块代码实现分为四层，自上而下分别是用户接口层、应用层、领域层、基础层。如下图，
 - ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20230826/ddd-arch-fenceng.png)
 - 适配器：以领域服务为中心，向上提供API、向下约定SPI；表现上，通过适配器和外部交互，将应用服务&领域服务封装在系统内部、和外部解耦
 - 依赖倒置：即SPI；由领域层依赖基础层，倒置成基础层依赖领域层；这样，其它层都依赖领域层、领域层不依赖其它层，领域层最终只受限于业务逻辑
