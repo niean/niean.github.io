@@ -97,17 +97,26 @@ func (this *BuAlarmApi) BuAlarm(c *gin.Context) {
 
 
 ②应用层
+var BuAlarmApp BuAlarmAppplication = nil;
+func init(){
+    if (BuAlarmApp == nil) {
+        BuAlarmApp = BuAlarmAppplication{
+            // 依赖注入
+            domainBuAlarm: domain.BuAlarm{IMRepo: repoIm.IMRepo}
+        }
+    }
+}
 // pkg: application
-var BuAlarmApp = new(BuAlarmAppplication)
+type BuAlarmAppplication struct {
+    domainBuAlarm domain.BuAlarm
+}
 func (this *BuAlarmAppplication) BuAlarm(alarmDTO dto.AlarmDTO) error {
     alarmBO := bo.AlarmBO{
         Budgetunit: alarmDTO.Budget_unit,
         Title:       alarmDTO.Title,
         Content:     alarmDTO.Content,
     }
-    // Go依赖注入
-    domain := &domain.BuAlarm{BuChatRepo: repo.BuChatRepo, IMRepo: repoIm.IMRepo}
-    err = domain.AlarmByBu(&alarmBO)
+    err = this.domainBuAlarm.AlarmByBu(&alarmBO)
     ...
     return nil
 }
