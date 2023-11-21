@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 多云资产管理平台
+title: 基础设施之多云管理
 date: 2022-03-30 22:00
 tags:
   - tools
