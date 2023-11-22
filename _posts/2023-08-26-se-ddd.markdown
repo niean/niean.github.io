@@ -73,7 +73,7 @@ DDD中的数据对象，大致分为如下几类：
 以Golang语言为例，实现一个 报警通知按照BU分发 的功能。四层结构如下，
 
 <details>
-<summary>DDD四层代码样例</summary>
+<summary>DDD四层代码样例(Golang)</summary>
 <pre><code class="language-golang">①用户接口层
 // pkg: httpcontroller
 func Routes(r *gin.Engine) {
@@ -161,6 +161,102 @@ func (this *IMSender) SendIM(im *do.IM) (err error) {
     SendChat(im.Tos, im.Content)
     ...
     return nil
+}
+
+</code></pre>
+</details>
+
+<details>
+<summary>DDD四层代码样例(Java)</summary>
+<pre><code class="language-java">①用户接口层
+package com.zyb.controller;
+import com.zyb.application.BuAlarmApplication;
+import com.zyb.application.dto.AlarmDTO;
+import javax.annotation.Resource;
+
+public class BuAlarmApi {
+    @Resource
+    private BuAlarmApplication buAlarmApplication;
+
+    public void sendEvents(String metric){
+        AlarmDTO alarmDTO = new AlarmDTO();
+        alarmDTO.setMetric(metric);
+        buAlarmApplication.buAlarm(alarmDTO);
+    }
+}
+
+
+②应用层
+package com.zyb.application;
+import com.zyb.application.dto.AlarmDTO;
+import com.zyb.domain.bualarm.bo.AlarmBO;
+import org.springframework.stereotype.Service;
+import com.zyb.domain.bualarm.service.*;
+import javax.annotation.Resource;
+
+@Service
+public class BuAlarmApplicationImpl implements BuAlarmApplication {
+    @Resource
+    private BuAlarmDomainService buAlarmDomainService;
+
+    @Override
+    public boolean buAlarm(AlarmDTO alarmDTO) {
+        AlarmBO alarmBO = new AlarmBO();
+        alarmBO.setMetric(alarmDTO.getMetric());
+        return buAlarmDomainService.alarmByBu(alarmBO);
+    }
+}
+
+
+③领域层(业务逻辑)
+package com.zyb.domain.bualarm.service;
+import com.zyb.domain.bualarm.bo.AlarmBO;
+import com.zyb.domain.bualarm.dependency.BuChatDependency;
+import org.springframework.stereotype.Service;
+import javax.annotation.Resource;
+
+@Service
+public class BuAlarmDomainServiceImpl implements BuAlarmDomainService{
+    @Resource
+    private BuChatDependency buChatDependency;
+
+    @Override
+    public boolean alarmByBu(AlarmBO alarmBO) {
+        buChatDependency.getBuChat(alarmBO.getMetric());
+        return true;
+    }
+}
+
+
+④基础设施层
+package com.zyb.infrastructure;
+import com.zyb.domain.bualarm.dataobject.BuChatDO;
+import com.zyb.domain.bualarm.dependency.BuChatDependency;
+import com.zyb.infrastructure.dao.BuChatMapper;
+import org.springframework.stereotype.Component;
+import javax.annotation.Resource;
+
+@Component
+public class BuChatDependencyImpl implements BuChatDependency {
+    @Resource
+    private BuChatMapper buChatMapper;
+
+    @Override
+    public BuChatDO getBuChat(String bu) {
+        return buChatMapper.getBuChat();
+    }
+}
+
+// DAO
+package com.zyb.infrastructure.dao;
+import com.zyb.domain.bualarm.dataobject.BuChatDO;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BuChatMapper {
+    public BuChatDO getBuChat(){
+        return null;
+    }
 }
 
 </code></pre>
