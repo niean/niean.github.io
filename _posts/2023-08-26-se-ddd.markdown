@@ -86,58 +86,61 @@ func (this *BuAlarmApi) BuAlarm(c *gin.Context) {
     content := c.DefaultPostForm("content", "")
     username, err := this.GetUser(c)
     alarmDTO := dto.AlarmDTO{
-        Budget_unit: bu,
+        BudgetUnit:  bu,
         Content:     content,
         Sysname:     username,
     }
-    err = BuAlarmApp.BuAlarm(alarmDTO)
+    err = app.BuAlarmApp.BuAlarm(alarmDTO)
     ...
     c.JSON(http.StatusOK, this.Success())
 }
 
 
 ②应用层
-var BuAlarmApp BuAlarmAppplication = nil;
-func init(){
-    if (BuAlarmApp == nil) {
-        BuAlarmApp = BuAlarmAppplication{
-            // 依赖注入
-            domainBuAlarm: domain.BuAlarm{IMRepo: repoIm.IMRepo}
-        }
-    }
+// pkg: app
+// 规范: 应用对象以全局变量方式对外暴露，目的是解耦类实现
+var BuAlarmApp = new(BuAlarmAppplication)
+
+// 依赖注入: 每个app文件，使用init函数完成注入
+func init() {
+    domain.BuAlarmDomainService.IMRepo = infra.IMRepo       // 依赖注入: 基础设施
+    BuAlarmApp.domainBuAlarm = domain.BuAlarmDomainService  // 依赖注入: 领域
 }
-// pkg: application
+
 type BuAlarmAppplication struct {
     domainBuAlarm domain.BuAlarm
 }
 func (this *BuAlarmAppplication) BuAlarm(alarmDTO dto.AlarmDTO) error {
     alarmBO := bo.AlarmBO{
-        Budgetunit: alarmDTO.Budget_unit,
+        BudgetUnit:  alarmDTO.BudgetUnit,
         Title:       alarmDTO.Title,
         Content:     alarmDTO.Content,
     }
-    err = this.domainBuAlarm.AlarmByBu(&alarmBO)
+    err = this.domainBuAlarm.AlarmByBu(alarmBO)
     ...
     return nil
 }
 
-③领域层
+
+③领域层(业务逻辑)
 // pkg: domain
-// SPI: IM基础设施接口定义 IMRepo
+var BuAlarmDomainService = new(BuAlarmDomain)
+
+// SPI: 基础设施接口定义
 type IMRepo interface {
     SendIM(im *do.IM) error
 }
-// DomainService: 领域服务 AlarmByBu
-type BuAlarm struct {
-    IMRepo     dependency.IMRepo     // IM基础设施
+
+// DomainService: 领域服务
+type BuAlarmDomain struct {
+    IMRepo     IMRepo     // IM基础设施
 }
-func (this *BuAlarm) AlarmByBu(alarmBO *bo.AlarmBO) (err error) {
-    bu := strings.TrimSpace(alarmBO.Budget_unit)
-    buChatDO, err := this.BuChatRepo.GetBuChat(bu)
+// API: 领域服务接口定义
+func (this *BuAlarmDomain) AlarmByBu(alarmBO *bo.AlarmBO) (err error) {
+    bu := strings.TrimSpace(alarmBO.BudgetUnit)
     ...
     imDO := do.IM{
         BU:      bu,
-        Tos:     buChatDO.ChatIds,
         Content: alarmBO.Content,
     }
     err = this.IMRepo.SendIM(&imDO)
@@ -145,14 +148,17 @@ func (this *BuAlarm) AlarmByBu(alarmBO *bo.AlarmBO) (err error) {
     return nil
 }
 
+
 ④基础设施层
-// pkg: infrastructure
+// pkg: infra
+// 规范: 基础设施对象以全局变量方式对外暴露，目的是解耦类实现、避免资源浪费
 var IMRepo = new(IMSender)
-// SP: IMSender实现IMRepo规定的SPI
+
+// SP: 基础设施接口实现，IMSender实现IMRepo规定的SPI
 type IMSender struct {
 }
 func (this *IMSender) SendIM(im *do.IM) (err error) {
-    SendChat(im.Tos, im.Content, createTitle(im.Content, im.Title))
+    SendChat(im.Tos, im.Content)
     ...
     return nil
 }
