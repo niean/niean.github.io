@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FinOps成本管理体系(未完待续)
-date: 2023-01-30 19:00
+date: 2020-11-18 19:00
 tags:
   - finops
 ---
@@ -55,7 +55,7 @@ FinOps组织结构，如下图。FinOps组织结构，由FinOps、ICSP(内部云
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoyaodian.png)
 
 #### 提报流程
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoliucheng.png)
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-yusuan-tibaoliucheng.jpg)
 
 
 
