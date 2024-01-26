@@ -39,6 +39,8 @@ J曲线：滞后效应，指的是一国货币贬值时，该国贸易收支及�
 
 技术成熟度曲线：Gartner技术成熟度曲线(Gartner’s Hype Cycles)，以图形方式展示了技术和应用的成熟度和采用情况，以及它们与解决实际业务问题和利用新机会的潜在相关性。
 
+纳什均衡：Nash Equilibrium，在策略博弈中形成了这样一种策略组合，即每个参与人的策略都是最优选择、更换策略不会带来更多收益，这个博弈结果就是纳什均衡。纳什证明，在有限策略的前提下，纳什均衡一定存在。
+
 
 ## 体系框架
 奥克姆剃刀：如非必要、勿增实体。
@@ -273,3 +275,8 @@ J曲线是一个经济学领域术语，定义是：一国货币贬值时，该�
 
 ![page](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20211008/波特五力模型.jpg)
 
+
+## 纳什均衡
+Nash Equilibrium，在策略博弈中形成了这样一种策略组合，即每个参与人的策略都是最优选择、更换策略不会带来更多收益，这个博弈结果就是纳什均衡。纳什证明，在有限策略的前提下，纳什均衡一定存在。
+
+![page](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20211008/ne.jpg)
