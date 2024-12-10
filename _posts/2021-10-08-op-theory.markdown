@@ -61,7 +61,7 @@ J曲线：滞后效应，指的是一国货币贬值时，该国贸易收支及�
 
 DevOps：是一组过程、方法与系统的统称，用于促进开发、技术运营和质量保障（QA）部门之间的沟通、协作与整合。它的目标是缩短从开发到部署的周期，通过打破开发、测试、运维之间的壁垒，实现持续交付(Continuous Delivery)。
 
-GitOps：GitOps将应用的所有环境配置都通过Git进行管理，并通过自动化的流程进行交付和变更，这样就是GitOps的核心理念。
+GitOps：将技术对象的代码、配置、环境等通过Git进行管理，实现「版本控制、流程自动化」如代码合并触发CICD，效果上做到 可审计、可重复(相似说法是幂等 最终一致)。可重复的一个好的实践是声明式，而非命令式。
 
 FinOps：领域内尚未形成统一认知。
 
@@ -122,7 +122,7 @@ DevOps落地依赖组织文化(Culture)、自动化(Automation)，同时也要�
 
 
 ## GitOps
-GitOps最早由Weaveworks公司在2017年提出，是IaC在K8S生态下的一种实现，也是对DevOps理念的一次实践落地。GitOps具备声明式基础设施、版本化、自动化等特征，做到了配置变更可审计、可重复、一致性，完全符合IaC定义。同时GitOps又超出了常规的IaC能力，因为它使用Git做代码管理，并最大限度的复用了Git的工具生态。一个典型的GitOps实现如下图，
+GitOps最早由Weaveworks公司在2017年提出，是IaC在K8S生态下的一种实现，也是对DevOps理念的一次实践落地。GitOps具备声明式基础设施、版本化、流程自动化等特征，做到了配置变更可审计、可重复、一致性，完全符合IaC定义。同时GitOps又超出了常规的IaC能力，因为它使用Git做代码管理，并最大限度的复用了Git的工具生态。一个典型的GitOps实现如下图，
 
 ![zone](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20211008/gitops-cd.png)
 
