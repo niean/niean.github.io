@@ -309,7 +309,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2024-03-31 10:26:20 +0000</string>
+	<string>2025-03-03 09:37:41 +0000</string>
 	<key>Modifier</key>
 	<string>niean</string>
 	<key>MovementHandleVisible</key>
@@ -20280,7 +20280,7 @@ eg. CPU/GPU}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{589.35295025719608, 478.51968950807571}, {70, 28}}</string>
+					<string>{{589.35295025719608, 470.51968950807583}, {113.992, 44}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -20330,7 +20330,8 @@ eg. CPU/GPU}</string>
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 \'b3\'c9\'b1\'be\'ce\'af\'d4\'b1\'bb\'e1}</string>
+\f0\fs24 \cf0 \'b3\'c9\'b1\'be\'ce\'af\'d4\'b1\'bb\'e1\
+\'bd\'bb\'b8\'b6\'b9\'dc\'bf\'d8(\'d0\'c2\'b9\'ba\'c9\'f3\'c5\'fa)}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -20392,7 +20393,7 @@ eg. CPU/GPU}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \'cd\'b3\'d2\'bb\'d7\'ca\'d4\'b4\'d6\'d0\'cc\'a8(\'bc\'bc\'ca\'f5\'d3\'c5\'bb\'af)\
-\'b3\'a3\'cc\'ac\'d4\'cb\'d3\'aa(\'b6\'a8\'c6\'da\'c9\'a8\'b3\'fd\'a1\'a2\'b6\'c0\'c1\'a2\'d1\'e9\'ca\'d5)}</string>
+\'b3\'a3\'cc\'ac\'d4\'cb\'d3\'aa(\'d4\'c2\'b6\'c8\'b7\'d6\'ce\'f6\'a1\'a2\'b6\'a8\'c6\'da\'c9\'a8\'b3\'fd)}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -20466,7 +20467,7 @@ eg. CPU/GPU}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{589.35295025719608, 316.81890062121892}, {154, 129}}</string>
+					<string>{{589.35295025719608, 316.81890062121892}, {188.04400000000001, 129}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -20524,12 +20525,12 @@ eg. CPU/GPU}</string>
 
 \f0\fs24 \cf0 \'b3\'c9\'b1\'be\'b9\'dc\'bf\'d8\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \'d4\'a4\'cb\'e3\'d6\'c6\'b6\'a8\'a1\'a2\'b3\'c9\'b1\'be\'b9\'dc\'bf\'d8\
+\cf2 \'d4\'a4\'cb\'e3\'d6\'c6\'b6\'a8\'a3\'ac\'bd\'bb\'b8\'b6\'b9\'dc\'bf\'d8\
 \'b5\'a5\'ce\'bb\'b3\'c9\'b1\'be\'b6\'c8\'c1\'bf\cf0 \
 \
 \'d2\'b5\'ce\'f1\'d0\'a7\'b9\'fb\
-\cf2 \'bd\'b5\'c5\'c4\'cb\'d1\'ca\'b6\'b1\'f0\'c2\'ca\'a1\'a2\'bd\'b5\'d6\'b1\'b2\'a5\'c2\'eb\'c2\'ca\
-\'bd\'b5\'ca\'fd\'be\'dd\'ca\'b1\'d0\'a7(\'c8\'e7\'b9\'e9\'b5\'b5)}</string>
+\cf2 \'bd\'b5\'d0\'a7\'b9\'fb(\'c8\'e7OCR\'ca\'b6\'b1\'f0\'c2\'ca\'a1\'a2\'ca\'d3\'c6\'b5\'c2\'eb\'c2\'ca)\
+\'bd\'b5\'ca\'b1\'d0\'a7(\'c8\'e7\'ca\'fd\'be\'dd\'b9\'e9\'b5\'b5)}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -20605,7 +20606,7 @@ eg. CPU/GPU}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{386.76378306394486, 316.81890062121897}, {149.99200000000002, 129}}</string>
+					<string>{{386.76378306394486, 316.81890062121897}, {189.136, 129}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -20663,14 +20664,14 @@ eg. CPU/GPU}</string>
 
 \f0\fs24 \cf0 \'bc\'bc\'ca\'f5\'ca\'d6\'b6\'ce\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \'b3\'cc\'d0\'f2\'d3\'c5\'bb\'af\'a3\'ac\'b5\'f7\'b6\'c8\'b2\'df\'c2\'d4\
-\'d4\'da\'c0\'eb\'cf\'df\'bb\'ec\'b2\'bf\'a3\'acServerless\
+\cf2 \'b3\'cc\'d0\'f2\'d3\'c5\'bb\'af\
+\'b5\'f7\'b6\'c8\'b2\'df\'c2\'d4\'a3\'acvNode\'cf\'f7\'b7\'e5\'a1\'a2\'d4\'da\'c0\'eb\'cf\'df\'bb\'ec\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \'d4\'cb\'d3\'aa\'ca\'d6\'b6\'ce\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \'b1\'dc\'c3\'e2\'c0\'cb\'b7\'d1\'a3\'ac\'c8\'b7\'b1\'a3\'d3\'d0\'d0\'a7\
-\'c8\'dd\'c1\'bf\'bb\'f9\'cf\'df\'b9\'dc\'bf\'d8(\'c8\'e7\'b6\'e0\'d4\'c6\'c8\'df\'d3\'e0)}</string>
+\cf2 \'b1\'dc\'c3\'e2\'cf\'d0\'d6\'c3\'a1\'a2\'b1\'dc\'c3\'e2\'b3\'ac\'c5\'e4\'a3\'ac\'b7\'c0\'ba\'da\'b2\'fa\
+\'c8\'dd\'c1\'bf\'bb\'f9\'cf\'df\'b9\'dc\'bf\'d8}</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -20681,7 +20682,7 @@ eg. CPU/GPU}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{206.9438161426898, 316.81890062121897}, {166.048, 129}}</string>
+					<string>{{206.9438161426898, 316.81890062121897}, {154, 129}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -20693,11 +20694,11 @@ eg. CPU/GPU}</string>
 						<key>Color</key>
 						<dict>
 							<key>b</key>
-							<string>0.574155</string>
+							<string>0</string>
 							<key>g</key>
-							<string>0.574162</string>
+							<string>0.149131</string>
 							<key>r</key>
-							<string>0.574149</string>
+							<string>1</string>
 							<key>space</key>
 							<string>srgb</string>
 						</dict>
@@ -20739,14 +20740,14 @@ eg. CPU/GPU}</string>
 
 \f0\fs24 \cf0 \'c9\'cc\'ce\'f1\'b2\'df\'c2\'d4\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \'bc\'af\'d6\'d0\'b2\'c9\'b9\'ba\
-\'b6\'e0\'d4\'c6\'d2\'e9\'bc\'db\'a3\'ac\'d5\'db\'bf\'db\'b2\'df\'c2\'d4\
+\cf2 \'bc\'af\'d6\'d0\'b2\'c9\'b9\'ba &amp; \'b6\'e0\'d4\'c6\'d2\'e9\'bc\'db\
+\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \'d7\'ca\'d4\'b4\'d1\'a1\'d0\'cd\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \'d0\'c2\'b2\'fa\'c6\'b7\'a3\'ac\'d3\'c5\'ca\'c6\'b2\'fa\'c6\'b7\'a3\'ac\'ba\'cf\'c0\'ed\'cd\'e2\'b2\'c9\
-\'c6\'ab\'d4\'b6IDC\'a3\'ac\'b3\'b1\'cf\'ab\'cb\'e3\'c1\'a6 \'b9\'fd\'b1\'a3\'d7\'ca\'d4\'b4}</string>
+\cf2 \'c6\'ab\'d4\'b6\'a1\'a2\'b9\'fd\'b1\'a3\'d7\'ca\'d4\'b4\'a3\'ac\'b3\'b1\'cf\'ab\'cb\'e3\'c1\'a6\
+\'d3\'c5\'ca\'c6\'b2\'fa\'c6\'b7\'a3\'ac\'d0\'c2\'b2\'fa\'c6\'b7 }</string>
 						<key>TextAlongPathGlyphAnchor</key>
 						<string>center</string>
 					</dict>
@@ -25944,19 +25945,19 @@ Binlog}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>5</integer>
+		<integer>9</integer>
 		<key>Frame</key>
 		<string>{{-0, -0}, {1280, 777}}</string>
 		<key>ShowInfo</key>
 		<false/>
 		<key>Sidebar</key>
-		<false/>
+		<true/>
 		<key>SidebarWidth</key>
 		<integer>244</integer>
 		<key>Sidebar_Tab</key>
 		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{-9.534883720930095, 36.76744186046492}, {595.34883720930247, 316.27906976744185}}</string>
+		<string>{{10.810810810810761, -0.45045045045050219}, {932.43243243243239, 612.61261261261268}}</string>
 		<key>WindowInfo_InspectorTab</key>
 		<array>
 			<string>com.omnigroup.OmniGraffle.inspectorGroup.object</string>
