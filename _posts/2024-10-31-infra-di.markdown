@@ -12,6 +12,12 @@ tags:
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20241031/di-xmind.png)
 
 
+## 要点简述
+- 数据基建：DIaC，Data Infra as Code代码即数据基建。这是我发明的领域名词，核心理念是 `以代码的方式，管理数据的生命周期`
+
+
+----
+----
 ## 数据建模
 - 版本：应用层相关的数据必须带版本，即使是被应用层间接引用的事实表；参与数据生成的维表可以不带版本，但后果是无法精确重算，可以折中选用拉链表
 
