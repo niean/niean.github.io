@@ -9,7 +9,7 @@ tags:
 ## 导读
 本文主要介绍基础设施领域的数据分析体系。数据体系全貌如下，
 
-![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20241031/infra-di-model.jpg)
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20241031/di-xmind.png)
 
 
 ## 数据建模
@@ -82,7 +82,7 @@ tags:
 - ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20231108/algorithm-UserBasedCollaborativeFiltering.jpg)
 
 ### 分析步骤
-- ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20231108/da-steps.jpg.jpg)
+- ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20231108/da-steps.jpg)
 - 明确范围：和利益无关的问题，都不值得做数据分析。公司范围内，常用四象限分析法
 - ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20231108/shouyi-fenxi.jpg)
 - 确定问题：数据分析的重点在问题、不在数据，不要一上来就用手头数据进行分析，要先针对问题利用AsIs-ToBe和6W2H方法进行细化
