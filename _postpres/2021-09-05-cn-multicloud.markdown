@@ -12,17 +12,18 @@ tags:
 ## 架构全貌
 CH基于云原生的多云架构，如下图：
 
-![multicloud-architecture](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-architecture.png)
+![multicloud-architecture](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-arch.png)
 
 其中，关键功能包括专线互通、基于容器技术的环境交付、数据同步、流量分区等，关键技术包括多云的资源管理、容器技术、服务治理、服务管理等。
 
 ## 容器技术
 关键点包括：
 
-- 镜像技术
 - 运行时
+- 容器镜像
 - 作业编排
 - 作业调度
+- 资源管理
 
 ## 服务治理
 关键点包括：
