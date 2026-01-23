@@ -15,7 +15,7 @@ layout: page
 <div style="margin-top:20px;">
     <h4 style="margin-bottom:5px;">技术历程</h4>
     <ul>
-        <li>2013-13：软件工程</li>
+        <li>2013-13：工程理论(分布式)</li>
         <li>2014-16：组件开发</li>
         <li>2017-18：工具开发，产品设计</li>
         <li>2019-20：精益运维</li>
