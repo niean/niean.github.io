@@ -7,3 +7,11 @@ safe: true
 permalink: /:year/:month/:day/:title
 url: http://blog.niean.name
 paginate: 16
+
+plugins:
+  - jekyll-paginate
+
+collections:
+  drafts:
+    output: true
+    permalink: /drafts/:year/:month/:day/:title/
