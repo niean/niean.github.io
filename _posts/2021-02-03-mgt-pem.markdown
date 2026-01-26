@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 运维管理之绩效面谈
+title: 技术管理之绩效面谈
 date: 2021-02-03 22:45
 tags:
   - mgt

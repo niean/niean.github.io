@@ -3,7 +3,7 @@ layout: post
 title: 运维建设之岗位模型
 date: 2020-01-25 22:20
 tags:
-  - thoughts
+  - theory
 ---
 
 ## 导读

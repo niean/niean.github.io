@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 运维部署系统介绍
+title: 运维平台之部署系统
 date: 2016-11-13 13:00
 tags:
-  - tools
+  - pe
 ---
 
 ## 导读

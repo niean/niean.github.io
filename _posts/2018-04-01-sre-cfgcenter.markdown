@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 配管在私有云环境遇到的问题
+title: 私有云配管问题
 date: 2018-04-01 11:00
 tags:
-  - thoughts
+  - ops
 ---
 
 ## 导读

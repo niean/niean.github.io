@@ -3,7 +3,7 @@ layout: post
 title: 运维风险量化建设思路
 date: 2019-04-21 19:30
 tags:
-  - tools
+  - ops
 ---
 
 ## 导读

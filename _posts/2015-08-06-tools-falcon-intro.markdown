@@ -3,7 +3,7 @@ layout: post
 title: 监控系统Falcon
 date: 2015-08-06 20:00
 tags:
-  - falcon
+  - pe
 ---
 
 加入小米监控团队有半年时间了，能与领域里的牛人们共事，很开心。当然，时不时会想起am团队的童鞋。闲话不多说了，今天介绍下小米的监控产品[Falcon](https://github.com/open-falcon)。

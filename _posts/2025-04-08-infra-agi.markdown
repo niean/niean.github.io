@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 基础设施之AGI应用(更新中)
+title: 基础设施之AGI应用(持续更新)
 date: 2025-04-08 21:00
 tags:
-  - ai
+  - insight
 ---
 
 ## 导读

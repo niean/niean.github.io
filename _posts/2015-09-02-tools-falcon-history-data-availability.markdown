@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 监控系统Falcon历史数据高可用
+title: 监控系统Falcon数据高可用
 date: 2015-09-02 12:00
 tags:
-  - falcon
+  - pe
 ---
 
 小米监控系统Falcon的历史数据，被存储在Rrd文件中，每个Rrd文件均无副本，存在单点问题。为了保障历史数据的高可用，我们进行了一些实践，整理成下文。

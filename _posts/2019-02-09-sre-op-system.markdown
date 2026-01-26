@@ -3,7 +3,7 @@ layout: post
 title: 应用运维的价值和实现思考
 date: 2019-02-09 16:00
 tags:
-  - thoughts
+  - ops
 ---
 
 

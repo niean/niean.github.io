@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 运维管理之工作规划
+title: 技术管理之工作规划
 date: 2020-12-24 22:30
 tags:
   - mgt
