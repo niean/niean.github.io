@@ -7,8 +7,3 @@ safe: true
 permalink: /:year/:month/:day/:title
 url: http://blog.niean.name
 paginate: 16
-
-comments:
-  provider: duoshuo
-  duoshuo:
-    short_name: nieanan
