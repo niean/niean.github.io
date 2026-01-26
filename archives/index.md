@@ -3,18 +3,16 @@ title: 时序
 layout: page
 ---
 
-<ul class="posts">
-	  {% for post in site.posts %}
-		{% unless post.next %}
-		  <h3>{{ post.date | date: '%Y' }}</h3>
-		{% else %}
-		  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		  {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		  {% if year != nyear %}
-			<h3>{{ post.date | date: '%Y' }}</h3>
-		  {% endif %}
-		{% endunless %}
-		
-		<li><span>{{ post.date | date: "%Y-%m-%d"}}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
+<ul class="listing">
+{% for post in site.posts %}
+  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+  {% if year != y %}
+    {% assign year = y %}
+    <li class="listing-seperator">{{ y }}</li>
+  {% endif %}
+  <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
 </ul>
