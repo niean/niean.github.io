@@ -4,7 +4,6 @@ title: 基础设施之成本管理FinOps
 date: 2020-11-18 20:00
 tags:
   - sg
-  - pe
 ---
 
 ## 导读
