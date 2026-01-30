@@ -41,14 +41,18 @@ a:hover {
   list-style-type: none;
 }
 .listing-item a {
-  padding: .2em 1em;
+  padding: .2em 0.5em;
   color: #333333;
 }
 .listing-item a:hover {
   color: #003399;
 }
 .listing-item time {
+  display: inline-block;
+  width: 100px;
   color: #999999;
+  font-family: monospace;
+  text-align: left;
 }
 .listing-seperator{
   font-weight: bold;

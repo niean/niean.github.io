@@ -33,7 +33,7 @@ layout: page
     {% assign tag_parts = tag_entry | split: '||' %}
     {% assign tag_name = tag_parts[1] %}
     {% assign tag = site.tags[tag_name] %}
-    <li class="listing-seperator" id="{{ tag_name }}">{{ tag_name }}({{ tag.size }})</li>
+    <li class="listing-seperator" id="{{ tag_name }}">{{ tag_name }}</li>
     {% assign sorted_posts = tag | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
     <li class="listing-item">
