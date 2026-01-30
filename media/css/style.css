@@ -41,7 +41,7 @@ a:hover {
   list-style-type: none;
 }
 .listing-item a {
-  padding: .2em 0.5em;
+  padding: .2em .5em;
   color: #333333;
 }
 .listing-item a:hover {
