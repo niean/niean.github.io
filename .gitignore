@@ -6,3 +6,4 @@ _site/
 backup/
 *.bak
 ~$*.xlsx
+serve.sh
