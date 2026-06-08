@@ -1,0 +1,6 @@
+# plans
+completed/*
+!completed/.gitkeep
+
+active/*
+!active/.gitkeep

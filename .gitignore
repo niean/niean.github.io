@@ -7,3 +7,6 @@ backup/
 *.bak
 ~$*.xlsx
 serve.sh
+docs/
+locals/
+.claude/worktrees/
