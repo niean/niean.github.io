@@ -51,6 +51,9 @@ name: "田园木竹"         # 博客名称
 url: http://blog.niean.name  # 博客地址
 permalink: /:year/:month/:day/:title  # 文章 URL 格式
 paginate: 16            # 分页大小
+giscus:                 # Giscus 评论配置
+  repo: niean/niean.github.io
+  mapping: pathname
 collections:
   drafts:
     output: true        # 草稿输出为页面
@@ -76,3 +79,4 @@ _site/                         # 构建输出目录（git ignored）
 - 文章数据由 Jekyll 在构建时解析，无需运行时数据库
 - 图片资源按文章日期组织，便于管理
 - 构建产物 _site/ 不纳入版本控制
+- Valine 历史评论导出 blog-comments.json 含评论内容、IP、邮箱、UA 等原始数据，不纳入版本控制

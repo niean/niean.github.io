@@ -1,16 +1,18 @@
 <!-- 评论组件 -->
-<div id="vcomments"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script>
-    new Valine({
-        el: '#vcomments' ,
-        appId: 'xiXnUFTTVsjwOj3RMdrgLY5w-gzGzoHsz',
-        appKey: 'jYgD3fF22rW5RS15dBywkiOs',
-        notify: false, 
-        verify: false, 
-        avatar: 'mm', 
-        visitor: true,
-        placeholder: '评论区'
-    });
+{% if site.giscus %}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo_id }}"
+        data-category="{{ site.giscus.category }}"
+        data-category-id="{{ site.giscus.category_id }}"
+        data-mapping="{{ site.giscus.mapping }}"
+        data-strict="{{ site.giscus.strict }}"
+        data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+        data-emit-metadata="{{ site.giscus.emit_metadata }}"
+        data-input-position="{{ site.giscus.input_position }}"
+        data-theme="{{ site.giscus.theme }}"
+        data-lang="{{ site.giscus.lang }}"
+        crossorigin="anonymous"
+        async>
 </script>
+{% endif %}

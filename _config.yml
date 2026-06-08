@@ -8,10 +8,23 @@ permalink: /:year/:month/:day/:title
 url: http://blog.niean.name
 paginate: 16
 
-plugins:
-  - jekyll-paginate
-
 collections:
   drafts:
     output: true
     permalink: /drafts/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-paginate
+
+giscus:
+  repo: niean/niean.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnk0MDM2MzgyMw==
+  category: Announcements
+  category_id: DIC_kwDOAmfnL84C-wwU
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 0
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  lang: en

@@ -9,4 +9,5 @@ backup/
 serve.sh
 docs/
 locals/
+blog-comments.json
 .claude/worktrees/

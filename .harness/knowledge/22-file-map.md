@@ -16,7 +16,7 @@
 
 ## 模板片段
 
-- 评论组件：_includes/comments.md
+- 评论组件：_includes/comments.md（Giscus 当前入口）、_includes/comments-valine-legacy.md（Valine 旧实现保留）
 - 打赏组件：_includes/pay.md
 
 ## 内容目录

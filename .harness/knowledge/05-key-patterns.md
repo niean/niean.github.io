@@ -42,10 +42,14 @@
 - 将可复用片段存放于 _includes/ 目录
 - 使用 `{% include filename %}` 引入片段
 - 常用于评论、打赏、页头、页脚等公共部分
+- 评论当前通过 _includes/comments.md 加载 Giscus，配置集中在 _config.yml 的 giscus 字段
+- Valine 旧实现保留在 _includes/comments-valine-legacy.md，默认不引用
 
 陷阱：
 - include 文件路径相对于 _includes/ 目录
 - 传入参数使用 `{% include filename param=value %}`
+- Giscus 使用 pathname 映射时，历史导入的 Discussion 标题需与页面 window.location.pathname 保持一致，本项目文章路径不带末尾斜杠
+- Giscus 页面展示 Discussion comments，历史归档需写入 comment；仅写在 Discussion body 中不会作为文章下方历史评论展示
 
 涉及文件：_includes/
 
