@@ -11,6 +11,11 @@
     - 评论：使用Giscus，替代正在使用的Valine插件，Valine相关代码先保留。然后，一次性导入Valine的历史评论 /Users/niean/l.downloads/blog-comments.json，需要保留创建时刻createdAt、评论内容comment、用户名nick等关键信息
         - 历史评论：①删除所有已导入的评论；②按照如下格式重新导入
 
+[20260609]
+- 优化
+    - 文章：干掉分页，即Prev、Next
+    - 评论：自定义样式Giscus，干掉第一排要素（如上图）
+
 ---
 
 [待办]
