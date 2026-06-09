@@ -48,7 +48,7 @@ layout: page
 markdown: kramdown      # Markdown 解析器
 author: niean           # 作者
 name: "田园木竹"         # 博客名称
-url: http://blog.niean.name  # 博客地址
+url: https://blog.niean.name  # 博客地址
 permalink: /:year/:month/:day/:title  # 文章 URL 格式
 paginate: 16            # 分页大小
 giscus:                 # Giscus 评论配置
@@ -57,7 +57,7 @@ giscus:                 # Giscus 评论配置
 collections:
   drafts:
     output: true        # 草稿输出为页面
-    permalink: /drafts/:year/:month/:day/:title/
+    permalink: /drafts/:year/:month/:day/:title
 ```
 
 ## 磁盘存储结构

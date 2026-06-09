@@ -11,7 +11,7 @@ paginate: 16
 collections:
   drafts:
     output: true
-    permalink: /drafts/:year/:month/:day/:title/
+    permalink: /drafts/:year/:month/:day/:title
 
 plugins:
   - jekyll-paginate
