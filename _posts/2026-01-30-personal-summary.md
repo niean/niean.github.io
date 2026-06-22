@@ -10,6 +10,25 @@ tags:
 在作业帮工作7年了(2019-2026)，职业生涯的一半多。趁年底总结，把历年工作摘要放到一起，还不错、未虚度。顺手整理了第一个10年的[**技术历程**](https://blog.niean.name/about/)，心安、无憾。
 
 
+----
+## 运维服务化
+平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing.png)
+
+## 多云基建
+分级云管 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-xmind.png)
+
+多云架构 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-arch.png)
+
+## 成本工程 FinOps
+组织模型 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/finops-zuzhi.png)
+
+成本平台 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-arch.png)
+
+## 基建Agent
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-xmind.png)
+
+
+----
 ## 成长节点
 - 19H2
     - 横向思维：延续滴滴的运维方法论，主稳定性、代工模式、服务者心态+成事的态度，从19H2持续到21H1。横向思维，有广度有格局(低阶格局)、但过于散焦，专业根基浅、价值难长久 —— 技术专业首先由纵向构成
