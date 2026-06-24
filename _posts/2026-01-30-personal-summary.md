@@ -10,6 +10,8 @@ tags:
 ## 运维服务化
 平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing.png)
 
+要点：平台工程固化能力，自助服务解耦人员；同构维持=>规模化运维，技术对象IaaS、PaaS、SaaS，生命周期元数据、变更、观测、成本、IAM
+
 ## 多云基建
 分级云管 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-xmind.png)
 
@@ -23,9 +25,16 @@ tags:
 ## 基建Agent
 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-xmind.png)
 
-## 组织工程
-![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20260130/management-framework.png)
+## 技术管理
+组织工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20260130/management-framework.png)
 
+要点：用工程方式、做技术管理
+
+## 认知体系
+- 成长模型：挑选顺境，持续小赢，不断强化自我实现的预言
+- 创新之道：灵感乍现记卡片，定期整理做分类，聚合归纳成体系，跨界迁移是创新 => 从卡片笔记到第二大脑
+- 系统思维：先归纳、后演绎，一线实践、理论建设螺旋式演进；实践→初步总结→指导新实践→完善理论
+- 数字世界：数字世界必将到来，它是物质世界的镜像、扩展，甚至数字原生空间；基础设施包括数字孪生、AGI等
 
 
 ----
