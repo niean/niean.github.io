@@ -40,6 +40,8 @@ AI组织，铁打的数字员工、流水的自然人。ER模型如下，
 
 好处很多。比如，数字员工能够沉淀可靠经验(二级规范)、实现更高程度的自动化，妥妥的提效。
 
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-digital-employee.png)
+
 
 ## 领域场景
 IDC，机器，组件，中台，应用
@@ -88,7 +90,19 @@ IDC，机器，组件，中台，应用
 
 ----
 ----
-以下为数学知识拾忆。
+推荐知识拾忆
+
+## Jaccard相似度(杰卡德)
+Jaccard相似度，定义和举例如下：
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/rec-jaccard.png)
+
+叠加Trust衰减后，如下：
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/rec-jaccard-trust.png)
+
+
+----
+----
+数学知识拾忆
 
 ## 召回率
 

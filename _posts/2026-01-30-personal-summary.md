@@ -6,7 +6,6 @@ tags:
   - personal
 ---
 
-----
 ## 运维服务化
 平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing.png)
 
@@ -37,6 +36,7 @@ tags:
 - 数字世界：数字世界必将到来，它是物质世界的镜像、扩展，甚至数字原生空间；基础设施包括数字孪生、AGI等
 
 
+----
 ----
 ## 成长节点
 在作业帮工作7年有余(2019-2026)，职业生涯的一半多。26年初，整理下作业帮历年工作摘要，顺手整理了第一个10年的[**技术历程**](https://blog.niean.name/about/)，心安、无憾。
