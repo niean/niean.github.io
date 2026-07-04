@@ -1,0 +1,116 @@
+<script>
+  window.mermaidDefaultAlign = "{{ page.mermaid_align | default: 'left' }}";
+</script>
+<style>
+  .mermaid svg { display: block; max-width: 100%; }
+  .mermaid.align-left svg { margin-left: 0; margin-right: auto; }
+  .mermaid.align-center svg { margin-left: auto; margin-right: auto; }
+  .mermaid.align-right svg { margin-left: auto; margin-right: 0; }
+  /* 覆盖博客全局 .label{text-transform:uppercase}，避免 mermaid 标签被大写 */
+  .mermaid .label { text-transform: none; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var defaultAlign = (window.mermaidDefaultAlign || 'left').toLowerCase();
+    if (['left', 'center', 'right'].indexOf(defaultAlign) === -1) {
+      defaultAlign = 'left';
+    }
+    function transform(codeEl) {
+      var text = codeEl.textContent;
+      var align = defaultAlign;
+      var match = text.match(/^\s*%%\s*align:\s*(left|center|right)\s*$/im);
+      if (match) {
+        align = match[1].toLowerCase();
+      }
+      var div = document.createElement('div');
+      div.className = 'mermaid align-' + align;
+      div.textContent = text;
+      return div;
+    }
+    document.querySelectorAll('code.language-mermaid').forEach(function(codeEl) {
+      var figure = codeEl.closest('figure.highlight');
+      var div = transform(codeEl);
+      if (figure) {
+        figure.parentNode.replaceChild(div, figure);
+      } else {
+        var pre = codeEl.parentNode;
+        if (pre) pre.parentNode.replaceChild(div, pre);
+      }
+    });
+    document.querySelectorAll('pre[lang="mermaid"]').forEach(function(pre) {
+      var codeEl = pre.querySelector('code') || pre;
+      var div = transform(codeEl);
+      pre.parentNode.replaceChild(div, pre);
+    });
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        background: '#ffffff',
+        fontSize: '14px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+        textColor: '#24292f',
+        primaryColor: '#f6f8fa',
+        primaryBorderColor: '#d0d7de',
+        primaryTextColor: '#24292f',
+        secondaryColor: '#f6f8fa',
+        secondaryBorderColor: '#d0d7de',
+        secondaryTextColor: '#24292f',
+        tertiaryColor: '#ffffff',
+        tertiaryBorderColor: '#d0d7de',
+        tertiaryTextColor: '#24292f',
+        lineColor: '#57606a',
+        edgeLabelBackground: '#ffffff',
+        clusterBkg: '#f6f8fa',
+        clusterBorder: '#d0d7de',
+        nodeBkg: '#f6f8fa',
+        nodeBorder: '#d0d7de',
+        classText: '#24292f',
+        defaultLinkColor: '#57606a',
+        titleColor: '#24292f',
+        fillType0Color: '#ddf4ff',
+        fillType1Color: '#dafbe1',
+        fillType2Color: '#fff8c5',
+        fillType3Color: '#ffd8a8',
+        fillType4Color: '#ffabab',
+        fillType5Color: '#ddcffd',
+        fillType6Color: '#f6f8fa',
+        fillType7Color: '#ffffff',
+        actorBkg: '#f6f8fa',
+        actorBorder: '#d0d7de',
+        actorTextColor: '#24292f',
+        actorLineColor: '#57606a',
+        signalColor: '#57606a',
+        signalTextColor: '#24292f',
+        labelBoxBkgColor: '#f6f8fa',
+        labelBoxBorderColor: '#d0d7de',
+        labelTextColor: '#24292f',
+        loopTextColor: '#24292f',
+        noteBkgColor: '#fff8c5',
+        noteBorderColor: '#d4a72c',
+        noteTextColor: '#24292f',
+        activationBkgColor: '#ddf4ff',
+        activationBorderColor: '#0969da',
+        gridColor: '#57606a',
+        doneTaskBkgColor: '#8250df',
+        doneTaskBorderColor: '#6e40c9',
+        activeTaskBkgColor: '#0969da',
+        activeTaskBorderColor: '#0550ae',
+        taskBkgColor: '#f6f8fa',
+        taskBorderColor: '#d0d7de',
+        taskTextColor: '#24292f',
+        taskTextDarkColor: '#24292f',
+        taskTextLightColor: '#24292f',
+        taskTextOutsideColor: '#24292f',
+        sectionBkgColor: '#f6f8fa',
+        sectionBkgColor2: '#ffffff',
+        altSectionBkgColor: '#f6f8fa',
+        todayLineColor: '#cf222e',
+        verticalSectionSeparatorLineColor: '#d0d7de',
+        attributeBackgroundColorOdd: '#f6f8fa',
+        attributeBackgroundColorEven: '#ffffff'
+      }
+    });
+  });
+</script>
