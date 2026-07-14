@@ -44,11 +44,12 @@
 - 常用于评论、打赏、页头、页脚等公共部分
 - 评论当前通过 _includes/comments.md 加载 Giscus，配置集中在 _config.yml 的 giscus 字段
 - Valine 旧实现保留在 _includes/comments-valine-legacy.md，默认不引用
+- 每篇文章通过 .github/scripts/giscus_ensure_discussions.py 预创建 discussion（title=term），避免页面加载时 giscus 返回 404；本地 --execute 回填、CI（.github/workflows/giscus-ensure-discussions.yml）push _posts/ 时自动补建
 
 陷阱：
 - include 文件路径相对于 _includes/ 目录
 - 传入参数使用 `{% include filename param=value %}`
-- Giscus 使用 pathname 映射时，历史导入的 Discussion 标题需与页面 window.location.pathname 保持一致，本项目文章路径不带末尾斜杠
+- Giscus mapping=pathname、strict=0：giscus term = window.location.pathname 去首尾斜杠 = yyyy/mm/dd/slug；discussion title 用此 term（giscus 原生格式）。strict=0 为包含匹配，历史迁移的 /yyyy/mm/dd/slug/（带斜杠）与 giscus 原生 yyyy/mm/dd/slug（无斜杠）两种 title 均能被命中
 - Giscus 页面展示 Discussion comments，历史归档需写入 comment；仅写在 Discussion body 中不会作为文章下方历史评论展示
 
 涉及文件：_includes/

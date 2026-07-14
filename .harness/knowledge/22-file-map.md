@@ -39,6 +39,11 @@
 - 静态资源：media/css/、media/js/、media/fonts/
 - 其他资源：resource/（文章附带的 Excel、PPT 等）
 
+## CI/自动化
+
+- Giscus discussion 预创建脚本：.github/scripts/giscus_ensure_discussions.py（枚举 _posts/，按 term=yyyy/mm/dd/slug 预创建 giscus discussion 以消除 404；dry-run / --execute / --only，幂等，含已知 discussion 自检）
+- Giscus discussion 自动创建工作流：.github/workflows/giscus-ensure-discussions.yml（push 到 _posts/ 时以 secrets.GISCUS_PAT 运行脚本 --execute，自动补建新文章 discussion）
+
 ## 构建输出
 
 - 构建产物：_site/（不纳入版本控制）

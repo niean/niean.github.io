@@ -1,0 +1,28 @@
+name: Giscus Ensure Discussions
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "_posts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ensure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Pre-create missing giscus discussions
+        env:
+          GH_TOKEN: ${{ secrets.GISCUS_PAT }}
+        run: python3 .github/scripts/giscus_ensure_discussions.py --execute
