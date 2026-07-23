@@ -9,4 +9,5 @@ tags:
 ## 导读
 本文主要介绍运维服务化OPaS的主要手段：平台工程。
 
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20240409/op-platform.png)
 
