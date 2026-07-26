@@ -12,9 +12,9 @@ tags:
 要点：平台工程固化能力，自助服务解耦人员；同构维持=>规模化运维，技术对象IaaS、PaaS、SaaS，生命周期元数据、变更、观测、成本、IAM
 
 ## 多云基建
-分级云管 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-xmind.png)
-
 多云架构 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-arch.png)
+
+分级云管 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-xmind.png)
 
 ## FinOps
 成本平台 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/zybcost-arch.png)
