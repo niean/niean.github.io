@@ -7,12 +7,15 @@ tags:
 ---
 
 ## 运维服务化
-平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing-2.png)
+OPaS：建设技术标准，最大化共性、规模化运营，建设内部治理平台IGP、防劣化；大中台，把IaaS、PaaS做成云产品，纵向管理、建设内部云平台ICSP；小前台，给开发者提供工单、观测、成本等高频场景的自助交付工具，内部开发者平台IDP。
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing-2.png)
 
-要点：建设技术标准，最大化共性、规模化运营，建设内部治理平台IGP、防劣化；大中台，把IaaS、PaaS做成云产品，纵向管理、建设内部云平台ICSP；小前台，给开发者提供工单、观测、成本等高频场景的自助交付工具，内部开发者平台IDP。
+统一的运维平台
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20240409/op-platform.png)
 
 ## 多云基建
-多云架构 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-arch.png)
+多云架构：三家主云(公共云TAB)，业务多活部署，故障时一键切云、快速止损，常态时多云议价、降低成本。
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20210905/multicloud-arch.png)
 
 分级云管 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220330/cmp-xmind.png)
 
@@ -22,12 +25,13 @@ tags:
 运营方式 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20201118/finops-zuzhi.png)
 
 ## 基建Agent
+务实落地：把运维、基建搬到 AgentRuntime 上，平台成功提效60%、Agent再叠加30%，解决知识答疑、低频变更、解决方案。自研 AgentRuntime。
 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-xmind.png)
 
 ## 技术管理
-组织工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20260130/management-framework.png)
+组织工程：用工程方式，做技术管理。如，组织间去耦合、梯度上去风险。
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20260130/management-framework.png)
 
-要点：用工程方式、做技术管理
 
 ## 认知体系
 - 成长模型：挑选顺境，持续小赢，不断强化自我实现的预言
