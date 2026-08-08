@@ -21,7 +21,7 @@ permalink: /about/resume/
 对公司、行业，产生了影响的工作结果：
 
 ## 运维服务化OPaS
-建设技术标准，最大化共性、规模化运营(内部治理平台IGP)；大中台，IaaS、PaaS产品纵向管理，建设内部云平台ICSP；简化前台，给开发者提供工单、观测、成本场景化的自助工具(内部开发者平台IDP)。
+建设技术标准，最大化共性、规模化运营，建设内部治理平台IGP、防劣化；大中台，把IaaS、PaaS做成云产品，纵向管理、建设内部云平台ICSP；小前台，给开发者提供工单、观测、成本等高频场景的自助交付工具，内部开发者平台IDP。
 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing-2.png)
 
 统一的运维平台
