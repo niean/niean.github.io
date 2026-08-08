@@ -90,7 +90,7 @@ tags:
 ## 领域模型
 运维转型，目标是探索出新的领域模型。以运维对象同构维持为基础，向上支撑对象、场景层的运维服务化体系(OPaS)，做到可持续的高技术杠杆，这就是新的运维领域模型。在当前的技术水平下，以自助平台为主的运维服务能解决70%的需求、剩余30%仍需要人工，比如需求沟通、问题排查、结果验收、政策合规等。随着技术和理念的进步，相信运维服务化的占比将进一步上升。
 
-![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing.png)
+![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing-2.png)
 
 备注：本文中的服务框架，既包括N年前的代码框架、代码库，也包括当前流行的微服务治理，过渡阶段、起名捉急。
 

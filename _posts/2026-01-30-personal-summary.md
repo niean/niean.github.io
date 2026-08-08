@@ -7,7 +7,7 @@ tags:
 ---
 
 ## 运维服务化
-平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing.png)
+平台工程 ![pict](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20220127/opas-zhengti-lingyumoxing-2.png)
 
 要点：平台工程固化能力，自助服务解耦人员；同构维持=>规模化运维，技术对象IaaS、PaaS、SaaS，生命周期元数据、变更、观测、成本、IAM
 
