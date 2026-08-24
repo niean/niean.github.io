@@ -1,0 +1,350 @@
+---
+title: 求职画廊
+permalink: /about/jobgallery
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>求职画廊</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%233370ff'/%3E%3Ccircle%20cx='43'%20cy='21'%20r='6'%20fill='%23fff'/%3E%3Cpath%20d='M11%2049l14-18%209%2011%206-7%2013%2014z'%20fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f5f6f8;
+    color: #1f2329;
+    min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(135deg, #3370ff 0%, #5b8cff 100%);
+    color: #fff;
+    padding: 28px 24px 20px;
+    text-align: center;
+  }
+  header h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .card .thumb {
+    width: 100%;
+    aspect-ratio: 1/0.75;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    background: #eef0f3;
+  }
+  .card .info { padding: 5px 6px; }
+  .card .date { font-size: 9px; font-weight: 500; color: #a9aeb8; }
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+  .lightbox .lb-info {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+  }
+  .lightbox .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox .nav:hover { background: rgba(255,255,255,0.25); }
+  .lightbox .prev { left: 24px; }
+  .lightbox .next { right: 24px; }
+  /* Emotion Section */
+  .emotion-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    border-top: 1px solid #e5e6eb;
+  }
+  .emotion-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2329;
+    margin-bottom: 4px;
+  }
+  .trend-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 24px;
+  }
+  .trend-bar {
+    display: flex;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .trend-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .trend-legend {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 32px;
+    font-size: 12px;
+    color: #4e5969;
+  }
+  .trend-legend span { display: flex; align-items: center; gap: 6px; }
+  .trend-legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .phase-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-left: 4px solid;
+  }
+  .phase-card .phase-title { font-size: 15px; font-weight: 600; color: #1f2329; margin-bottom: 4px; }
+  .phase-card .phase-date { font-size: 12px; color: #86909c; margin-bottom: 10px; }
+  .phase-card .phase-emotion { font-size: 13px; color: #4e5969; margin-bottom: 8px; }
+  .phase-card .phase-emotion strong { color: #1f2329; }
+  .phase-card .phase-detail { font-size: 12px; color: #86909c; line-height: 1.6; }
+  .conclusion {
+    background: #f0f5ff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 0 -24px;
+    font-size: 13px;
+    color: #4e5969;
+    line-height: 1.8;
+  }
+  .conclusion strong { color: #1f2329; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>求职画廊 - 路漫漫其修远兮（2026.06.23~08.09）</h1>
+</header>
+
+<div class="gallery" id="gallery"></div>
+
+<div class="trend-section">
+  <div class="trend-bar">
+    <div class="trend-seg" style="flex:5; background:#86909c;" title="在岗谈判期 06.04–06.08（5天）">在岗谈判</div>
+    <div class="trend-seg" style="flex:10; background:#0fc6c2;" title="离职松弛期 06.09–06.18（10天）">离职松弛</div>
+    <div class="trend-seg" style="flex:16; background:#f53f3f;" title="求职焦虑期 06.24–07.09（16天）">求职焦虑</div>
+    <div class="trend-seg" style="flex:16; background:#ffd500;" title="决策摇摆期 07.11–07.26（16天）">决策摇摆</div>
+    <div class="trend-seg" style="flex:8; background:#00b42a;" title="尘埃落定期 08.02–08.09（8天）">尘埃落定</div>
+    <div class="trend-seg" style="flex:3; background:#165dff;" title="稳定开心期 08.10–08.12（3天）">稳定开心</div>
+  </div>
+  <div class="trend-legend">
+    <span><i style="background:#86909c;"></i>在岗谈判期 06.04–06.08</span>
+    <span><i style="background:#0fc6c2;"></i>离职松弛期 06.09–06.18</span>
+    <span><i style="background:#f53f3f;"></i>求职焦虑期 06.24–07.09</span>
+    <span><i style="background:#ffd500;"></i>决策摇摆期 07.11–07.26</span>
+    <span><i style="background:#00b42a;"></i>尘埃落定期 08.02–08.09</span>
+    <span><i style="background:#165dff;"></i>稳定开心期 08.10–08.12</span>
+  </div>
+</div>
+
+<section class="emotion-section">
+  <h2>心态分析</h2>
+  <div class="conclusion">
+    <strong>背景：</strong>2026年06-08月 主人公经历在职→离职→求职→入职全过程，基于 N 张头像图片分析心态变化。<br>
+    <strong>心态：</strong>06月初在岗谈判，06月中旬离职后短暂松弛，06月下至07月上旬求职焦虑，07月中下旬犹豫摇摆选Offer，08月上旬平静选定，08月中旬点赞卖萌、彻底放松。<br>
+    <strong>着装：</strong>06月初T恤办公室着装，06月中起居家赤裸上身，07月中T恤外出面试，08月上正式POLO衫、系新工作就位标志。
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" onclick="closeLightbox()">&times;</button>
+  <button class="nav prev" onclick="navLightbox(-1)">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="nav next" onclick="navLightbox(1)">&#8250;</button>
+  <div class="lb-info" id="lbInfo"></div>
+</div>
+
+<script>
+const images = [
+  {date:"2026-06-04",time:"11:45",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-04_11-45.jpg"},
+  {date:"2026-06-05",time:"14:18",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-05_14-18.jpg"},
+  {date:"2026-06-06",time:"20:51",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-06_20-51.jpg"},
+  {date:"2026-06-07",time:"18:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-07_18-00.jpg"},
+  {date:"2026-06-08",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-08_10-00.jpg"},
+  {date:"2026-06-09",time:"10:33",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-09_10-33.jpg"},
+  {date:"2026-06-10",time:"11:31",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-10_11-31.jpg"},
+  {date:"2026-06-11",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-11_10-00.jpg"},
+  {date:"2026-06-12",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-12_10-00.jpg"},
+  {date:"2026-06-14",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-14_10-00.jpg"},
+  {date:"2026-06-15",time:"18:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-15_18-00.jpg"},
+  {date:"2026-06-16",time:"18:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-16_18-00.jpg"},
+  {date:"2026-06-17",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-17_10-00.jpg"},
+  {date:"2026-06-18",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-18_10-00.jpg"},
+  {date:"2026-06-23",time:"10:02",src:"nagent",sender:"聂安",url:"/images/20260824/2026-06-23_10-02.jpg"},
+  {date:"2026-06-24",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-24_10-00.jpg"},
+  {date:"2026-06-28",time:"10:12",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-06-28_10-12.jpg"},
+  {date:"2026-06-30",time:"18:20",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-06-30_18-20.jpg"},
+  {date:"2026-07-01",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-01_10-00.jpg"},
+  {date:"2026-07-02",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-02_10-00.jpg"},
+  {date:"2026-07-03",time:"18:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-03_18-00.jpg"},
+  {date:"2026-07-04",time:"10:03",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-04_10-03.jpg"},
+  {date:"2026-07-05",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-05_10-00.jpg"},
+  {date:"2026-07-07",time:"10:02",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-07_10-02.jpg"},
+  {date:"2026-07-09",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-09_10-00.jpg"},
+  {date:"2026-07-11",time:"18:01",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-11_18-01.jpg"},
+  {date:"2026-07-13",time:"10:03",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-13_10-03.jpg"},
+  {date:"2026-07-15",time:"10:00",src:"hermes",sender:"HermesM5",url:"/images/20260824/2026-07-15_10-00.jpg"},
+  {date:"2026-07-16",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-16_10-00.jpg"},
+  {date:"2026-07-17",time:"14:09",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-17_14-09.jpg"},
+  {date:"2026-07-18",time:"18:05",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-18_18-05.jpg"},
+  {date:"2026-07-19",time:"21:29",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-19_21-29.jpg"},
+  {date:"2026-07-20",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-20_10-00.jpg"},
+  {date:"2026-07-21",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-21_10-00.jpg"},
+  {date:"2026-07-23",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-23_10-00.jpg"},
+  {date:"2026-07-26",time:"18:46",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-07-26_18-46.jpg"},
+  {date:"2026-08-02",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-02_10-00.jpg"},
+  {date:"2026-08-04",time:"17:55",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-04_17-55.jpg"},
+  {date:"2026-08-05",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-05_10-00.jpg"},
+  {date:"2026-08-07",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-07_10-00.jpg"},
+  {date:"2026-08-08",time:"10:00",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-08_10-00.jpg"},
+  {date:"2026-08-09",time:"13:01",src:"nagent",sender:"聂安",url:"/images/20260824/2026-08-09_13-01.jpg"},
+  {date:"2026-08-10",time:"10:01",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-10_10-01.jpg"},
+  {date:"2026-08-11",time:"19:45",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-11_19-45.jpg"},
+  {date:"2026-08-12",time:"12:58",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-12_12-58.jpg"}
+];
+
+let lbIndex = 0;
+
+// 心态阶段（与 trend-bar 保持一致），end 为该阶段的截止日期，按顺序取首个匹配
+const phases = [
+  {name:"在岗谈判期", end:"2026-06-08", color:"#86909c"},
+  {name:"离职松弛期", end:"2026-06-18", color:"#0fc6c2"},
+  {name:"求职焦虑期", end:"2026-07-09", color:"#f53f3f"},
+  {name:"决策摇摆期", end:"2026-07-26", color:"#ffd500"},
+  {name:"尘埃落定期", end:"2026-08-09", color:"#00b42a"},
+  {name:"稳定开心期", end:"9999-12-31", color:"#165dff"}
+];
+
+function phaseOf(date) {
+  return phases.find(p => date <= p.end) || phases[phases.length - 1];
+}
+
+function render() {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
+  images.forEach((img, i) => {
+    const phase = phaseOf(img.date);
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.onclick = () => openLightbox(i);
+    card.innerHTML = `
+      <img class="thumb" src="${img.url}" alt="${img.date}" loading="lazy">
+      <div class="info" title="${phase.name}">
+        <div class="date" style="color:${phase.color};">${img.date.slice(5).replace('-','.')} ${img.time}</div>
+      </div>`;
+    gallery.appendChild(card);
+  });
+}
+
+function openLightbox(idx) {
+  lbIndex = idx;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+}
+function navLightbox(dir) {
+  lbIndex = (lbIndex + dir + images.length) % images.length;
+  updateLightbox();
+}
+function updateLightbox() {
+  const img = images[lbIndex];
+  const srcLabel = img.src === 'hermes' ? 'HermesM5' : 'NAgent';
+  document.getElementById('lbImg').src = img.url;
+  document.getElementById('lbInfo').textContent = `${img.date} ${img.time} · ${srcLabel} · ${img.sender} (${lbIndex+1}/${images.length})`;
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('show')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+document.getElementById('lightbox').onclick = e => {
+  if (e.target.id === 'lightbox') closeLightbox();
+};
+
+render();
+</script>
+</body>
+</html>
