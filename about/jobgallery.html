@@ -8,7 +8,7 @@ permalink: /about/jobgallery
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>求职画廊</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%233370ff'/%3E%3Ccircle%20cx='43'%20cy='21'%20r='6'%20fill='%23fff'/%3E%3Cpath%20d='M11%2049l14-18%209%2011%206-7%2013%2014z'%20fill='%23fff'/%3E%3C/svg%3E">
+<link rel="shortcut icon" href="/images/favicon.ico">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -18,8 +18,7 @@ permalink: /about/jobgallery
     min-height: 100vh;
   }
   header {
-    background: linear-gradient(135deg, #3370ff 0%, #5b8cff 100%);
-    color: #fff;
+    color: #1a1a1a;
     padding: 28px 24px 20px;
     text-align: center;
   }
@@ -27,10 +26,15 @@ permalink: /about/jobgallery
   .gallery {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 24px 32px;
+    padding: 20px 24px 16px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-columns: repeat(9, 1fr);
     gap: 8px;
+  }
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   .card {
     background: #fff;
@@ -115,8 +119,7 @@ permalink: /about/jobgallery
   .emotion-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 24px 60px;
-    border-top: 1px solid #e5e6eb;
+    padding: 40px 24px 30px;
   }
   .emotion-section h2 {
     font-size: 20px;
@@ -127,7 +130,7 @@ permalink: /about/jobgallery
   .trend-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px 24px;
+    padding: 0 24px 8px;
   }
   .trend-bar {
     display: flex;
@@ -154,7 +157,6 @@ permalink: /about/jobgallery
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 10px;
-    margin-bottom: 32px;
     font-size: 12px;
     color: #4e5969;
   }
@@ -182,49 +184,292 @@ permalink: /about/jobgallery
     background: #f0f5ff;
     border-radius: 10px;
     padding: 20px 24px;
-    margin: 0 -24px;
+    margin: 0 0 24px;
     font-size: 13px;
     color: #4e5969;
     line-height: 1.8;
   }
   .conclusion strong { color: #1f2329; }
+  /* Poem Card (浓墨风 · 横排) */
+  .poem-card {
+    background: #f1eee7;
+    border-radius: 10px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid #1a1a1a;
+    margin: 16px 0 0;
+  }
+  .poem-line {
+    font-size: 19px;
+    color: #1a1a1a;
+    line-height: 2.4;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    font-weight: 500;
+  }
+  .poem-title {
+    font-size: 22px;
+    color: #1a1a1a;
+    text-align: center;
+    letter-spacing: 8px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    font-weight: 600;
+    margin-bottom: 4px;
+    padding-left: 8px;
+  }
+  .poem-author {
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: center;
+    letter-spacing: 6px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    margin-bottom: 14px;
+    padding-left: 6px;
+  }
+  .poem-preface {
+    font-size: 14px;
+    color: #2a2a2a;
+    text-align: center;
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    max-width: 880px;
+    margin: 20px auto 8px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    padding-left: 1.5px;
+  }
+  .poem-preface-closing {
+    font-size: 13px;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: 1.9;
+    letter-spacing: 4px;
+    max-width: 880px;
+    margin: 0 auto 24px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    padding-left: 4px;
+  }
+  /* Gallery Section (wrap gallery + trend) */
+  .gallery-section h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2329;
+  }
+  /* Insight Section */
+  .insight-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 40px;
+  }
+  .insight-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2329;
+    margin-bottom: 16px;
+  }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .insight-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-top: 3px solid;
+  }
+  .insight-card.feat { border-top-color: #f53f3f; }
+  .insight-card.refl { border-top-color: #ff7d00; }
+  .insight-card .insight-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2329;
+    margin-bottom: 12px;
+  }
+  .insight-card .insight-title small {
+    font-size: 12px;
+    color: #86909c;
+    font-weight: 400;
+    margin-left: 6px;
+  }
+  .insight-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .insight-card li {
+    font-size: 13px;
+    color: #4e5969;
+    line-height: 1.7;
+    padding: 6px 0;
+    border-top: 1px dashed #e5e6eb;
+  }
+  .insight-card li:first-child { border-top: none; padding-top: 0; }
+  .insight-card .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+    font-weight: 500;
+    vertical-align: 1px;
+  }
+  .insight-card .tag-company { background: #e8f3ff; color: #165dff; }
+  .insight-card .tag-person  { background: #fff4e6; color: #ff7d00; }
+  .insight-card .tag-system  { background: #f5e8ff; color: #722ed1; }
+  .insight-card .tag-value   { background: #e6fffb; color: #0fc6c2; }
+  .insight-card .tag-soe     { background: #ffe6e6; color: #f53f3f; }
+  /* Liu Section (酬乐天咏老见示 · 桑榆未晚) */
+  .liu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 40px;
+  }
+  .liu-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2329;
+    margin-bottom: 16px;
+  }
+  .liu-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+  .liu-meta .liu-poem-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 8px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    margin-bottom: 4px;
+    padding-left: 8px;
+  }
+  .liu-meta .liu-poem-author {
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 6px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    margin-bottom: 14px;
+    padding-left: 6px;
+  }
+  .liu-poem {
+    font-size: 19px;
+    color: #1a1a1a;
+    line-height: 2.4;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+  }
+  .liu-couplet {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 4px 0;
+  }
+  .liu-preface {
+    font-size: 14px;
+    color: #2a2a2a;
+    text-align: center;
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    max-width: 880px;
+    margin: 20px auto 8px;
+    font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
+    padding-left: 1.5px;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>求职画廊 - 路漫漫其修远兮（2026.06.23~08.09）</h1>
+  <h1>求职画廊 - 莫听穿林打叶声</h1>
 </header>
 
-<div class="gallery" id="gallery"></div>
-
-<div class="trend-section">
-  <div class="trend-bar">
-    <div class="trend-seg" style="flex:5; background:#86909c;" title="在岗谈判期 06.04–06.08（5天）">在岗谈判</div>
-    <div class="trend-seg" style="flex:10; background:#0fc6c2;" title="离职松弛期 06.09–06.18（10天）">离职松弛</div>
-    <div class="trend-seg" style="flex:16; background:#f53f3f;" title="求职焦虑期 06.24–07.09（16天）">求职焦虑</div>
-    <div class="trend-seg" style="flex:16; background:#ffd500;" title="决策摇摆期 07.11–07.26（16天）">决策摇摆</div>
-    <div class="trend-seg" style="flex:8; background:#00b42a;" title="尘埃落定期 08.02–08.09（8天）">尘埃落定</div>
-    <div class="trend-seg" style="flex:3; background:#165dff;" title="稳定开心期 08.10–08.12（3天）">稳定开心</div>
-  </div>
-  <div class="trend-legend">
-    <span><i style="background:#86909c;"></i>在岗谈判期 06.04–06.08</span>
-    <span><i style="background:#0fc6c2;"></i>离职松弛期 06.09–06.18</span>
-    <span><i style="background:#f53f3f;"></i>求职焦虑期 06.24–07.09</span>
-    <span><i style="background:#ffd500;"></i>决策摇摆期 07.11–07.26</span>
-    <span><i style="background:#00b42a;"></i>尘埃落定期 08.02–08.09</span>
-    <span><i style="background:#165dff;"></i>稳定开心期 08.10–08.12</span>
-  </div>
-</div>
-
 <section class="emotion-section">
-  <h2>心态分析</h2>
-  <div class="conclusion">
-    <strong>背景：</strong>2026年06-08月 主人公经历在职→离职→求职→入职全过程，基于 N 张头像图片分析心态变化。<br>
-    <strong>心态：</strong>06月初在岗谈判，06月中旬离职后短暂松弛，06月下至07月上旬求职焦虑，07月中下旬犹豫摇摆选Offer，08月上旬平静选定，08月中旬点赞卖萌、彻底放松。<br>
-    <strong>着装：</strong>06月初T恤办公室着装，06月中起居家赤裸上身，07月中T恤外出面试，08月上正式POLO衫、系新工作就位标志。
+  <div class="poem-card">
+    <div class="poem-title">定风波</div>
+    <div class="poem-author">宋·苏轼</div>
+    <div class="poem-preface">丙午之夏，余置身帮内，心力交瘁。遂举手协商，饮憾而别。独闯寒冬，历百折而不屈，遭毒打而志坚，终获良栖、得以新生。咏东坡词，以志心路。</div>
+    <div class="poem-line">莫听穿林打叶声，何妨吟啸且徐行。</div>
+    <div class="poem-line">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</div>
+    <div class="poem-line">料峭春风吹酒醒，微冷，山头斜照却相迎。</div>
+    <div class="poem-line">回首向来萧瑟处，归去，也无风雨也无晴。</div>
   </div>
 </section>
+
+<section class="insight-section">
+  <h2>求职感悟</h2>
+  <div class="insight-grid">
+    <div class="insight-card feat">
+      <div class="insight-title">特征 <small>供大于求 =&gt; X</small></div>
+      <ul>
+        <li><span class="tag tag-company">企业</span>垂直筛选：领域+能力双匹配，精准画像、拿来主义</li>
+        <li><span class="tag tag-company">企业</span>降级录用：杀鸡用牛刀，候选人被大材小用、高能低就</li>
+        <li><span class="tag tag-person">个人</span>超长待业：需求少、出的随机，待业周期 3-6 个月</li>
+        <li><span class="tag tag-person">个人</span>机会分布：互联网，高阶岗位以平替/升级为主，新增岗位 Agent 占 80%；传统行业，有高阶机会、会降薪</li>
+      </ul>
+    </div>
+    <div class="insight-card refl">
+      <div class="insight-title">反思 <small>制度约束，价值反思，意外发现</small></div>
+      <ul>
+        <li><span class="tag tag-system">制度</span>中年职场困境，来自人才过剩背景下的制度设计；跑赢同龄就能善终，这个想法大概率不成立</li>
+        <li><span class="tag tag-value">价值</span>社会/组织需要的、才是有价值的，个人信仰、理念、偏好意义都不大</li>
+        <li><span class="tag tag-soe">发现</span>国企技术 VP 很多大牛，多来自互联网大厂的高龄上岸。莫道桑榆晚，为霞尚满天</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <h2>求职画廊</h2>
+  <div class="trend-section">
+    <div class="trend-bar">
+      <div class="trend-seg" style="flex:4; background:#86909c;" title="在岗谈判期 06.04–06.07（4天）">在岗谈判</div>
+      <div class="trend-seg" style="flex:8; background:#0fc6c2;" title="离职松弛期 06.08–06.18（11天）">离职松弛</div>
+      <div class="trend-seg" style="flex:16; background:#f53f3f;" title="求职焦虑期 06.19–07.17（29天）">求职焦虑</div>
+      <div class="trend-seg" style="flex:8; background:#ffd500;" title="决策摇摆期 07.18–07.26（9天）">决策摇摆</div>
+      <div class="trend-seg" style="flex:8; background:#00b42a;" title="尘埃落定期 08.02–08.09（8天）">尘埃落定</div>
+      <div class="trend-seg" style="flex:4; background:#165dff;" title="稳定开心期 08.10–08.13（4天）">稳定开心</div>
+    </div>
+    <div class="trend-legend">
+      <span><i style="background:#86909c;"></i>在岗谈判期 06.04–06.07</span>
+      <span><i style="background:#0fc6c2;"></i>离职松弛期 06.08–06.18</span>
+      <span><i style="background:#f53f3f;"></i>求职焦虑期 06.19–07.17</span>
+      <span><i style="background:#ffd500;"></i>决策摇摆期 07.18–07.26</span>
+      <span><i style="background:#00b42a;"></i>尘埃落定期 08.02–08.09</span>
+      <span><i style="background:#165dff;"></i>稳定开心期 08.10–08.13</span>
+    </div>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="liu-section">
+  <h2>桑榆未晚</h2>
+  <div class="liu-card">
+    <div class="liu-meta">
+      <div class="liu-poem-name">酬乐天咏老见示</div>
+      <div class="liu-poem-author">唐·刘禹锡</div>
+    </div>
+    <div class="liu-preface">
+      刘禹锡此诗作于暮年，酬答白居易咏老之作，人虽暮、豪情却不减。反观我自己，人到中年，蹉跎过、被毒打过，但依然壮怀激烈、不废千里之志。莫道桑榆晚、为霞尚满天，吾道不孤矣。
+    </div>
+    <div class="liu-poem">
+      <div class="liu-couplet"><span>人谁不顾老，</span><span>老去有谁怜。</span></div>
+      <div class="liu-couplet"><span>身瘦带频减，</span><span>发稀冠自偏。</span></div>
+      <div class="liu-couplet"><span>废书缘惜眼，</span><span>多炙为随年。</span></div>
+      <div class="liu-couplet"><span>经事还谙事，</span><span>阅人如阅川。</span></div>
+      <div class="liu-couplet"><span>细思皆幸矣，</span><span>得此老莱衣。</span></div>
+      <div class="liu-couplet"><span>莫道桑榆晚，</span><span>为霞尚满天。</span></div>
+    </div>
+  </div>
+</section>
+
 
 <div class="lightbox" id="lightbox">
   <button class="close" onclick="closeLightbox()">&times;</button>
@@ -280,16 +525,16 @@ const images = [
   {date:"2026-08-09",time:"13:01",src:"nagent",sender:"聂安",url:"/images/20260824/2026-08-09_13-01.jpg"},
   {date:"2026-08-10",time:"10:01",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-10_10-01.jpg"},
   {date:"2026-08-11",time:"19:45",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-11_19-45.jpg"},
-  {date:"2026-08-12",time:"12:58",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-12_12-58.jpg"}
+  {date:"2026-08-13",time:"12:58",src:"nagent",sender:"NAgent",url:"/images/20260824/2026-08-13_12-58.jpg"}
 ];
 
 let lbIndex = 0;
 
 // 心态阶段（与 trend-bar 保持一致），end 为该阶段的截止日期，按顺序取首个匹配
 const phases = [
-  {name:"在岗谈判期", end:"2026-06-08", color:"#86909c"},
+  {name:"在岗谈判期", end:"2026-06-07", color:"#86909c"},
   {name:"离职松弛期", end:"2026-06-18", color:"#0fc6c2"},
-  {name:"求职焦虑期", end:"2026-07-09", color:"#f53f3f"},
+  {name:"求职焦虑期", end:"2026-07-17", color:"#f53f3f"},
   {name:"决策摇摆期", end:"2026-07-26", color:"#ffd500"},
   {name:"尘埃落定期", end:"2026-08-09", color:"#00b42a"},
   {name:"稳定开心期", end:"9999-12-31", color:"#165dff"}

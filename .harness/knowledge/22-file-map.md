@@ -27,7 +27,7 @@
 ## 功能页面
 
 - 关于页面：about/index.md
-- 简历页面：about/resume.md（permalink: /about/resume/）
+- 简历页面：about/resume.md（permalink: /about/resume）
 - 归档页面：archives/index.md
 - 分类页面：categories/index.md
 - 标签页面：tags/index.md

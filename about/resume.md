@@ -1,7 +1,7 @@
 ---
 title: 个人简历
 layout: page
-permalink: /about/resume/
+permalink: /about/resume
 ---
 
 ## 基本信息
