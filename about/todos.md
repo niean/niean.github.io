@@ -1,6 +1,6 @@
 ---
-layout: post
-title: 个人总结-TODO
+layout: page
+title: TODOs
 date: 2026-01-01 00:00
 tags:
 ---

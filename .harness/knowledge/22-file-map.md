@@ -23,15 +23,18 @@
 
 - 已发布文章：_posts/*.markdown
 - 草稿文章：_drafts/*.markdown
+- 不公开文章：_unposts/*.markdown、_unposts/*.html（默认构建即渲染，permalink 与 posts 同空间 `/:year/:month/:day/:title/`，不进入任何列表/归档/feed/分类页——单篇隐藏于 posts URL 空间，仅索引页 `/unposts/` 暴露。`.html` 文件用 `layout: null` 保留 raw HTML 输出，见模式八）
 
 ## 功能页面
 
 - 关于页面：about/index.md
 - 简历页面：about/resume.md（permalink: /about/resume）
+- 个人总结页面：about/personal-todos.md（permalink: /about/personal-todos，原 _drafts/2026-01-01-personal-todos.md 迁入）
 - 归档页面：archives/index.md
 - 分类页面：categories/index.md
 - 标签页面：tags/index.md
 - 草稿列表：drafts/index.md
+- 不公开文章列表：unposts/index.md（与 drafts/index.md 同结构；front matter 显式 `permalink: /unposts/`，避免与同名 collection 的 URL 解析冲突）
 - 分页页面：paginator/index.html
 
 ## 资源目录

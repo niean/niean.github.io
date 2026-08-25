@@ -6,7 +6,7 @@
 本项目为静态博客站点，采用典型的 Jekyll 静态站点架构：
 
 - 表现层：HTML 模板（_layouts/、_includes/）
-- 内容层：Markdown 文章（_posts/、_drafts/）
+- 内容层：Markdown 文章（_posts/、_drafts/、_unposts/）
 - 配置层：Jekyll 配置（_config.yml）
 - 资源层：静态文件（images/、media/）
 
@@ -17,10 +17,11 @@
 | 布局模板 | _layouts/ | 页面布局模板（default、page、post） |
 | 模板片段 | _includes/ | 可复用的模板片段（comments、pay） |
 | 已发布文章 | _posts/ | 已发布的博客文章 |
-| 草稿文章 | _drafts/ | 未发布的草稿文章 |
+| 草稿文章 | _drafts/ | 未发布的草稿文章（custom collection + Jekyll 内置） |
+| 不公开文章 | _unposts/ | 不公开的文章；permalink 与 posts 同空间（`/:year/:month/:day/:title/`），单篇不进入列表/归档/feed/分类页，仅 `/unposts/` 索引页暴露 |
 | 图片资源 | images/ | 博客文章配图，按日期目录组织 |
 | 静态资源 | media/ | CSS、JS、Fonts 等静态资源 |
-| 页面 | about/、archives/、categories/、tags/、drafts/、paginator/ | 各功能页面 |
+| 页面 | about/、archives/、categories/、tags/、drafts/、unposts/、paginator/ | 各功能页面 |
 | 其他资源 | resource/ | 文章附带的资源文件（如 Excel、PPT） |
 
 ## 关键约束

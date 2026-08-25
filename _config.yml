@@ -12,6 +12,9 @@ collections:
   drafts:
     output: true
     permalink: /drafts/:year/:month/:day/:title
+  unposts:
+    output: true
+    permalink: /:year/:month/:day/:title
 
 plugins:
   - jekyll-paginate

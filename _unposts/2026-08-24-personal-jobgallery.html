@@ -1,6 +1,7 @@
 ---
-title: 求职画廊
-permalink: /about/jobgallery
+layout: null
+title: 个人总结之求职画廊
+date: 2026-08-24 00:00
 ---
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -19,7 +20,7 @@ permalink: /about/jobgallery
   }
   header {
     color: #1a1a1a;
-    padding: 28px 24px 20px;
+    padding: 60px 24px 20px;
     text-align: center;
   }
   header h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
@@ -35,6 +36,15 @@ permalink: /about/jobgallery
     .gallery {
       grid-template-columns: repeat(3, 1fr);
     }
+    /* 两首诗词：移动端字体缩小 20% */
+    .poem-line, .liu-poem { font-size: 15.2px; }
+    .poem-title, .liu-poem-name { font-size: 17.6px; }
+    .poem-author, .liu-poem-author { font-size: 11.2px; }
+    .poem-preface, .liu-preface { font-size: 11.2px; }
+    .poem-preface-closing { font-size: 10.4px; }
+    /* 移动端收紧对联间距、防止半句换行 */
+    .liu-couplet { gap: 8px; letter-spacing: 1.5px; }
+    .liu-couplet span { white-space: nowrap; }
   }
   .card {
     background: #fff;
@@ -119,7 +129,7 @@ permalink: /about/jobgallery
   .emotion-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 24px 30px;
+    padding: 8px 24px 30px;
   }
   .emotion-section h2 {
     font-size: 20px;
@@ -197,7 +207,7 @@ permalink: /about/jobgallery
     padding: 36px 32px 32px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     border-top: 4px solid #1a1a1a;
-    margin: 16px 0 0;
+    margin: 0;
   }
   .poem-line {
     font-size: 19px;
@@ -233,7 +243,7 @@ permalink: /about/jobgallery
     text-align: center;
     line-height: 1.9;
     letter-spacing: 1.5px;
-    max-width: 880px;
+    max-width: 820px;
     margin: 20px auto 8px;
     font-family: "KaiTi", "STKaiti", "STSong", "宋体", "SimSun", serif;
     padding-left: 1.5px;
@@ -395,7 +405,7 @@ permalink: /about/jobgallery
   <div class="poem-card">
     <div class="poem-title">定风波</div>
     <div class="poem-author">宋·苏轼</div>
-    <div class="poem-preface">丙午之夏，余置身帮内，心力交瘁。遂举手协商，饮憾而别。独闯寒冬，历百折而不屈，遭毒打而志坚，终获良栖、得以新生。咏东坡词，以志心路。</div>
+    <div class="poem-preface">丙午之夏，余置身帮内，心力交瘁。遂举手协商，饮憾而别，独闯职场寒冬。历百折、遭毒打，终获良栖。咏东坡词，以志心路。</div>
     <div class="poem-line">莫听穿林打叶声，何妨吟啸且徐行。</div>
     <div class="poem-line">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</div>
     <div class="poem-line">料峭春风吹酒醒，微冷，山头斜照却相迎。</div>
@@ -457,14 +467,14 @@ permalink: /about/jobgallery
       <div class="liu-poem-author">唐·刘禹锡</div>
     </div>
     <div class="liu-preface">
-      刘禹锡此诗作于暮年，酬答白居易咏老之作，人虽暮、豪情却不减。反观我自己，人到中年，蹉跎过、被毒打过，但依然壮怀激烈、不废千里之志。莫道桑榆晚、为霞尚满天，吾道不孤矣。
+      梦得暮年作诗，豪情不减。余亦中年，蹉跎既久、屡遭磨折，然壮怀激烈、不废千里之志。以梦得为伴，吾道不孤。
     </div>
     <div class="liu-poem">
       <div class="liu-couplet"><span>人谁不顾老，</span><span>老去有谁怜。</span></div>
       <div class="liu-couplet"><span>身瘦带频减，</span><span>发稀冠自偏。</span></div>
       <div class="liu-couplet"><span>废书缘惜眼，</span><span>多炙为随年。</span></div>
       <div class="liu-couplet"><span>经事还谙事，</span><span>阅人如阅川。</span></div>
-      <div class="liu-couplet"><span>细思皆幸矣，</span><span>得此老莱衣。</span></div>
+      <div class="liu-couplet"><span>细思皆幸矣，</span><span>下此便翛然。</span></div>
       <div class="liu-couplet"><span>莫道桑榆晚，</span><span>为霞尚满天。</span></div>
     </div>
   </div>

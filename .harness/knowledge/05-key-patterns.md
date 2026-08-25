@@ -100,3 +100,43 @@
 - 排查时易误以为是 mermaid 主题或 kramdown 问题，实为博客 CSS 与 mermaid class 命名空间碰撞
 
 涉及文件：_includes/mermaid.html（覆盖规则）、media/css/style.css 与 media/css/home.css（全局 .label 徽章规则）
+
+## 模式七：_unposts 不公开文章
+
+描述：通过自定义 Jekyll collection 实现"URL 可访问、不对外可发现"的文章类型。
+
+实现要点：
+- `_config.yml` 中 `collections.unposts` 设为 `output: true`，permalink 与 posts 同空间（`/:year/:month/:day/:title`）——单篇 URL 不可枚举（与 posts 混在一起），但与 posts 同日期同标题会冲突（Jekyll 后加载覆盖前者）
+- 文件命名格式同 `_posts/`：`YYYY-MM-DD-title.markdown`，必须包含完整 Front Matter（layout/title/date）
+- 默认 `jekyll build` 即渲染 HTML 至 `_site/YYYY/MM/DD/title.html`（与 posts 同 URL 空间）
+- 由于 unposts 是独立 collection（`site.unposts`），不会进入 `site.posts`，因此不会出现在首页/归档/分类/标签/feed 等任何由 `site.posts` 派生的列表中
+- 索引页：`unposts/index.md`（与 `drafts/index.md` 同结构），遍历 `site.unposts` 按年分组倒序输出，permalink `/unposts/`（**必须显式声明 `permalink: /unposts/`**，否则页面与同名 collection 冲突时 Liquid 循环静默失败——`site.unposts | size` 仍输出正确值，但 `{% for %}` 无任何 HTML 输出，列表为空）
+- 访问方式：仅可通过直接 URL 访问（`/unposts/` 索引或 `/YYYY/MM/DD/title.html` 单篇），导航/侧边栏/页脚均不出现入口
+
+陷阱：
+- **URL 冲突**：unposts 与 posts 共享 `/:year/:month/:day/:title/` 空间，同日期同标题会发生覆盖（Jekyll 后加载覆盖前者）；`jekyll build` 不报错但内容被覆盖。规避：使用 unpost 时确认 `_posts/` 中无同日同标题
+- 索引页 `unposts/index.md` 是**唯一暴露 unposts 存在的入口**——`permalink: /unposts/` 必填，否则 for 循环静默失败
+- `jekyll serve` 运行中修改 `_config.yml` 的 collection 配置**不会被自动加载**，需重启 serve 才生效（已踩坑：live serve 持续用旧 permalink 覆盖 build 输出）
+- 旧版实现曾加 `defaults: published: false` + `--unpublished` 标志切换可见性——已废弃，改为默认渲染（GitHub Pages 不支持 custom plugin，published:false + collection output:true 行为不直观）
+- 若需单篇 unpost 临时下架，在该文件 Front Matter 加 `published: false` 即可
+- `safe: true` 下不依赖 custom plugin，纯 Jekyll 原生机制，GitHub Pages 兼容
+
+涉及文件：_config.yml（unposts collection）、_unposts/（不公开文章）、unposts/index.md（索引页）
+
+## 模式八：_unposts/ 下放完整 HTML 页面（layout: null）
+
+描述：将原本作为 Jekyll 静态页面（`about/*.html` 等）的全 HTML 文档迁入 `_unposts/`，保留 raw HTML 输出。
+
+实现要点：
+- 文件扩展名保持 `.html`（不改为 .markdown，避免 kramdown 解析冲突）
+- Front matter 加 `layout: null` 阻止 Jekyll 用 default/page/post layout 包裹，否则内嵌的 `<!DOCTYPE>`、`<html>`、`<head>`、`<body>` 标签会与 layout 冲突
+- Front matter 加 `date:` 字段，文件命名 `YYYY-MM-DD-slug.html`
+- 该文件作为 unposts collection 文档渲染，permalink 遵循 unposts collection 规则（`/:year/:month/:day/:title/`）
+- 原 `about/*.html` 文件删除——旧 permalink 失效（GitHub Pages 不支持 custom plugin 时无原生 redirect；可考虑用 `jekyll-redirect-from` 插件并加入 `_config.yml` plugins 列表）
+
+陷阱：
+- 未加 `layout: null` 时，HTML 内容仍会被 Jekyll 模板包裹，导致双 `<!DOCTYPE>`、CSS/JS 失效
+- 文件保留 `.html` 扩展名时，Jekyll 不经过 kramdown 解析——`<style>`/`<script>` 内的 Liquid 标签 `{{ }}` 不会被执行（但本模式页面一般不依赖 Liquid）
+- 从 `about/*.html` 迁移后，原 URL 立即 404；如需保留外部链接，预先评估影响或加 redirect
+
+涉及文件：_unposts/*.html（带 `layout: null` 的 raw HTML 文档）
