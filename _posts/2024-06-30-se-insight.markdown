@@ -522,6 +522,15 @@ K8S不等于云原生。符合标准的公有云、私有云、混合云方案�
 
 ## 运维->基础设施(20230911)
 
+#### 2026.10.08 技术对象分层词汇
+- PIS：Physical InfraStructure，物理基础设施
+- IaaS：Infrastructure as a Service，基础设施即服务
+- PaaS：Platform as a Service，平台即服务
+- SaaS：Software as a Service，软件即服务
+- iPaaS：Integration Platform as a Service，集成平台即服务。这个概念有点牵强
+- aPaaS：Application Platform as a Service，应用平台即服务（如低代码平台）
+
+
 #### 2025.12.31 云厂商协作的技术底线
 厂商协作，云产品能力不Ready时，推厂商改造、还是我方适配？基本原则是什么？
 
