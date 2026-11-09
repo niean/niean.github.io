@@ -1,8 +1,9 @@
 ---
 layout: post
-title: 基础设施之AGI应用(持续更新)
+title: AI基建之基础设施(持续更新)
 date: 2025-04-08 21:00
 tags:
+  - ai
   - insight
 ---
 
@@ -20,6 +21,7 @@ tags:
   - 阶段执行：阶段划分，大面上由人类来做，精细到局部后、就可以交给AI(也称为意图识别、问题分类)；阶段内执行，拆分到足够小、直到可以交给AI去做；
   - 可成长性：AI技术较弱时，阶段划分需要足够小、足够细；随着AI能力的增强，阶段即可随之扩大、从而实现工程简化。
   - 技术约束、永远存在，只要分治得当、也能拿到不错的效果，在AI技术快速迭代的当下、尤为显著。
+- 架构原则：Agent应用对Runtime依赖倒置
 
 
 ----
@@ -41,6 +43,20 @@ AI组织，铁打的数字员工、流水的自然人。ER模型如下，
 好处很多。比如，数字员工能够沉淀可靠经验(二级规范)、实现更高程度的自动化，妥妥的提效。
 
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-digital-employee.png)
+
+
+#### 架构-依赖倒置
+
+Agent应用应依赖稳定的Runtime SPI与语义契约，各Runtime通过适配器实现契约。业务逻辑面向抽象编写，在约定的能力与语义范围内，切换Runtime无需修改业务代码。
+
+SPI统一调用接口，语义契约统一运行行为，包括会话与执行的生命周期、流式事件、工具调用、暂停恢复、错误与状态等。只有接口与语义都兼容，Runtime才具备可替换性。借鉴Claude Managed Agents的解耦思路，分离Session、Harness与Sandbox，明确各自的职责与归属、进而独立演进：
+
+- Session：承载会话数据与执行记录，用户掌握数据的访问、导出与迁移权限，数据不绑定具体Runtime。
+- Harness：承载Agent的执行编排，包括上下文组织、模型与工具调用、执行控制，由Agent团队负责。
+- Sandbox：提供受控的代码与命令执行环境，由执行环境团队负责。
+- Agent应用：通过稳定契约使用上述能力，业务团队专注于业务规则与Agent应用逻辑。
+
+![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/agi-runtime-spi.png)
 
 
 ## 领域场景

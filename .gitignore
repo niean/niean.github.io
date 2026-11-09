@@ -5,6 +5,7 @@
 _site/
 backup/
 *.bak
+*.bkp
 ~$*.xlsx
 serve.sh
 docs/

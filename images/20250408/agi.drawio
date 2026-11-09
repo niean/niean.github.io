@@ -1,0 +1,49 @@
+<mxfile host="Electron">
+  <diagram id="agent-runtime-spi" name="依赖倒置">
+    <mxGraphModel dx="1011" dy="757" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="960" pageHeight="660" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="app" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#cddff6;strokeColor=#b9cce4;fontColor=#161616;fontFamily=PingFang SC;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Agent应用&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#808080;&quot;&gt;业务规则与应用逻辑&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="620" x="170" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="contract" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=light-dark(#808080, #ededed);fontFamily=PingFang SC;fontSize=18;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Runtime SPI + 语义契约&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#808080;&quot;&gt;生命周期 · 流式事件 · 工具调用 · 暂停恢复 · 错误与状态&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="620" x="170" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-a" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=0;fillColor=#F4F8FE;strokeColor=#b9cce4;fontColor=#161616;fontFamily=PingFang SC;fontSize=18;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Runtime A" vertex="1">
+          <mxGeometry height="65" width="280" x="170" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-b" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=0;fillColor=#F4F8FE;strokeColor=#b9cce4;fontColor=#161616;fontFamily=PingFang SC;fontSize=18;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Runtime B" vertex="1">
+          <mxGeometry height="65" width="280" x="510" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="app-depends" edge="1" parent="1" source="app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=PingFang SC;fontSize=14;fontColor=#475569;labelBackgroundColor=#FFFFFF;" target="contract" value="依赖">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-implements" edge="1" parent="1" source="runtime-a" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;strokeColor=#64748b;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=PingFang SC;fontSize=14;fontColor=#475569;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;curved=0;" target="contract" value="实现">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b-implements" edge="1" parent="1" source="runtime-b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;strokeColor=#64748b;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=PingFang SC;fontSize=14;fontColor=#475569;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;curved=0;" target="contract" value="实现">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary-title" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;fontColor=#161616;fontFamily=PingFang SC;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Runtime：运行时职责解耦 / 独立边界与归属" vertex="1">
+          <mxGeometry height="32" width="620" x="170" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="session" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;fontColor=#161616;fontFamily=PingFang SC;fontSize=17;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Session&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#808080;&quot;&gt;会话数据与执行记录&lt;br&gt;用户：访问、导出与迁移权限&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="170" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="harness" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#e1ebf8;strokeColor=#b9cce4;fontColor=#161616;fontFamily=PingFang SC;fontSize=17;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Harness&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#808080;&quot;&gt;上下文组织与执行编排&lt;br&gt;Agent团队负责&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="380" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="sandbox" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F4F8FE;strokeColor=#b9cce4;fontColor=#161616;fontFamily=PingFang SC;fontSize=17;fontStyle=0;align=center;verticalAlign=middle;spacing=10;" value="Sandbox&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#808080;&quot;&gt;受控代码与命令执行环境&lt;br&gt;执行环境团队负责&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="590" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="rp2CwoZ23YkfWjmN7jgc-1" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeWidth=1;rounded=0;strokeColor=#949494;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="166" y="441" as="sourcePoint" />
+            <mxPoint x="798" y="441" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
