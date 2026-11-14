@@ -106,7 +106,7 @@ IDC，机器，组件，中台，应用
 
 ----
 ----
-推荐知识拾忆
+AI知识拾忆
 
 ## Jaccard相似度(杰卡德)
 Jaccard相似度，定义和举例如下：
@@ -114,6 +114,17 @@ Jaccard相似度，定义和举例如下：
 
 叠加Trust衰减后，如下：
 ![page.png](https://raw.githubusercontent.com/niean/niean.github.io/master/images/20250408/rec-jaccard-trust.png)
+
+
+## RaR
+RaR：Rubrics as Rewards，把明确的评分准则转化为强化学习的奖励信号。例如评价客服 Agent，可以逐项检查：
+
+- 是否正确理解用户诉求。
+- 是否依据业务规则回答。
+- 是否完成问题处理。
+- 是否避免编造承诺。
+
+评估器按这些准则打分，再将得分汇总为奖励，用于训练模型。相比笼统地评价“回答好不好”，它能更明确地告诉模型哪些方面做得好、哪些需要改进。
 
 
 ----
